@@ -77,4 +77,29 @@ public class ComplexNumber {
     public String toString() {
         return real + (imaginary >= 0 ? "+" : "") + imaginary + "i\n";
     }
+
+    public void add(ComplexNumber cn) {
+        this.imaginary += cn.getImaginary();
+        this.real += cn.getReal();
+    }
+
+    public void subtract(ComplexNumber cn) {
+        this.imaginary -= cn.getImaginary();
+        this.real -= cn.getReal();
+    }
+
+    public void multiply(ComplexNumber cn) {
+        double auxReal = this.real * cn.getReal() - this.imaginary * cn.getImaginary();
+        double auxImaginary = this.real * cn.getImaginary() + this.imaginary * cn.getReal();
+        this.real = auxReal;
+        this.imaginary = auxImaginary;
+    }
+
+    public void divide(ComplexNumber cn) {
+        cn.setImaginary((-1)*cn.getImaginary());
+        this.multiply(cn);
+        double toDivide = (cn.getReal()*cn.getReal()) + (cn.getImaginary()*cn.getImaginary());
+        this.real /= toDivide;
+        this.imaginary /= toDivide;
+    }
 }

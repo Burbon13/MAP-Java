@@ -22,28 +22,57 @@ public class Main {
     }
 
     public static void verifyExpression(String[] args) {
-        System.out.println("Verifying the given expression:");
-        ComplexNumber result = new ComplexNumber();
-        int sign = 1;
-        boolean isValid = true;
-        for(int index = 0; index < args.length; index++) {
-            if(index % 2 == 0) {
-                if(!ComplexNumber.isValidComplexNumber(args[index])) {
-                    System.out.println("Invalid expression!");
-                    return;
-                }
-                ComplexNumber cnAux = new ComplexNumber(args[index]);
-                System.out.print(result + " + " + cnAux + " = ");
-                result.setImaginary(result.getImaginary()+sign*cnAux.getImaginary());
-                result.setReal(result.getReal()+sign*cnAux.getReal());
-                System.out.println(result);
-            } else if(args[index].charAt(0) == '-')
-                sign = -1;
-            else
-                sign = 1;
+        System.out.println("Verifying the given expression...");
+        if(args.length == 1) {
+            System.out.println(new ComplexNumber(args[0]));
+            return;
         }
 
+        Operation operation;
+        switch (args[1]) {
+            case "+" :
+                operation = Operation.ADD;
+                break;
+            case "-" :
+                operation = Operation.SUBTRACT;
+                break;
+            case "/" :
+                operation = Operation.DIVIDE;
+                break;
+            case "*" :
+                operation = Operation.MULTIPLY;
+                break;
+            default :
+                System.out.println("Invalid operation!");
+                return;
+        }
+
+        ComplexNumber result = new ComplexNumber(args[0]);
+
+        for(int index = 2; index < args.length; index += 2) {
+            switch (operation) {
+                case ADD:
+                    result.add(new ComplexNumber(args[index]));
+                    break;
+                case DIVIDE:
+                    result.divide(new ComplexNumber(args[index]));
+                    break;
+                case MULTIPLY:
+                    result.multiply(new ComplexNumber(args[index]));
+                    break;
+                case SUBTRACT:
+                    result.subtract(new ComplexNumber(args[index]));
+                    break;
+            }
+        }
         System.out.println("Result is: " + result);
+    }
+
+    public enum Operation {
+        ADD,
+        SUBTRACT,
+        MULTIPLY,
+        DIVIDE
     }
 
     public static void test() {
