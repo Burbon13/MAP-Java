@@ -5,9 +5,8 @@ public class MessageTask extends Task {
     private String message, from, to;
     private LocalDateTime date;
 
-    //TODO:The constructor has a lot of parameters, what solutions do you have?
-    MessageTask(String taskId, String description, String message, String from, String to, String date) {
-        super(taskId, description);
+    public MessageTask(String taskID, String description, String message, String from, String to, String date) {
+        super(taskID, description);
         this.message = message;
         this.from = from;
         this.to = to;
@@ -48,6 +47,6 @@ public class MessageTask extends Task {
 
     @Override
     public void execute() {
-        System.out.println(super.toString() + " From: " + from + "; To: " + to + "; Message: " + message + " (" + date +")");
+        System.out.println(super.toString() + "| From: " + from + "| To: " + to + "| Message: " + message + "| (" + date +")");
     }
 }

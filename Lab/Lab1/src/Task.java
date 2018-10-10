@@ -27,6 +27,6 @@ public abstract class Task {
 
     @Override
     public String toString() {
-        return "Task id: " + taskId + " ; Description: " + description;
+        return "TaskID: " + taskId + "; Description: " + description;
     }
 }
