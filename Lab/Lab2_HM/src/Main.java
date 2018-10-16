@@ -1,6 +1,7 @@
 import java.util.Vector;
 
-public class Lab2 {
+public class Main {
+
     public static void main(String[] args) {
         //Exercise 4
         Task[] tasks = new Task[5];
@@ -13,8 +14,31 @@ public class Lab2 {
         for(Task t : tasks)
             t.execute();
 
+        System.out.println("----- Exercise 10 -----");
+
+        //Exercise 10
+        TaskRunner strategyTaskRunner = new StrategyTaskRunner(args[0].equals("LIFO") ? Strategy.LIFO : Strategy.FIFO);
+        for(int i = 0; i < 5; i++)
+            strategyTaskRunner.addTask(tasks[i]);
+        strategyTaskRunner.executeAll();
+
+        //Exercise 13
+        System.out.println("----- Exercise 13 ------");
+        TaskRunner printerTaskRunner = new PrinterTaskRunner(new StrategyTaskRunner(args[0].equals("LIFO") ? Strategy.LIFO : Strategy.FIFO));
+        for(int i = 0; i < 5; i++)
+            printerTaskRunner.addTask(tasks[i]);
+        printerTaskRunner.executeAll();
+
+        //Exercise 14
+        System.out.println("---- Exercise 14 -----");
+        TaskRunner printerDelayTaskRunner = new PrinterTaskRunner(new DelayTaskRunner(new StrategyTaskRunner(args[0].equals("LIFO") ? Strategy.LIFO : Strategy.FIFO)));
+        for(int i = 0; i < 5; i++)
+            printerDelayTaskRunner.addTask(tasks[i]);
+        printerDelayTaskRunner.executeAll();
+
 
         //Test SortingTask
+        System.out.println("---- Test SortingTask ----");
         Vector<Integer> vector = new Vector<>();
         vector.add(3);
         vector.add(10);
