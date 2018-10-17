@@ -1,3 +1,11 @@
+package Runner;
+
+import Factory.TaskContainerFactory;
+import Runner.*;
+import Container.*;
+import Task.Task;
+import Strategy.Strategy;
+
 public class StrategyTaskRunner implements TaskRunner {
     private Container c;
 

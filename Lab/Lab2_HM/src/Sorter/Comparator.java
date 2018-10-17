@@ -1,3 +1,5 @@
+package Sorter;
+
 public class Comparator {
     private boolean ascending;
 

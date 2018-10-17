@@ -1,12 +1,14 @@
+package Task;
+
 public abstract class Task {
     private String taskID, description;
 
-    Task() {
+    public Task() {
         this.taskID = "N/A";
         this.description = "N/A";
     }
 
-    Task(String taskID, String description) {
+    public Task(String taskID, String description) {
         this.taskID = taskID;
         this.description = description;
     }

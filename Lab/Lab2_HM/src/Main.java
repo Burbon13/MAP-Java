@@ -1,3 +1,13 @@
+import Runner.DelayTaskRunner;
+import Runner.PrinterTaskRunner;
+import Runner.StrategyTaskRunner;
+import Runner.TaskRunner;
+import Sorter.BubbleSorter;
+import Sorter.Comparator;
+import Sorter.QuickSorter;
+import Strategy.Strategy;
+import Task.*;
+
 import java.util.Vector;
 
 public class Main {
@@ -37,8 +47,16 @@ public class Main {
         printerDelayTaskRunner.executeAll();
 
 
-        //Test SortingTask
-        System.out.println("---- Test SortingTask ----");
+        //Extra combinationsss hehe
+        System.out.println("----EXTRA COMBINATION----");
+        TaskRunner extraTaskRunner = new PrinterTaskRunner(new PrinterTaskRunner(new DelayTaskRunner(printerDelayTaskRunner)));
+        for(int i = 0; i < 5; i++)
+            extraTaskRunner.addTask(tasks[i]);
+        extraTaskRunner.executeAll();
+
+
+        //Test Task.SortingTask
+        System.out.println("---- Test Task.SortingTask ----");
         Vector<Integer> vector = new Vector<>();
         vector.add(3);
         vector.add(10);

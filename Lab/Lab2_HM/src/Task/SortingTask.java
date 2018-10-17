@@ -1,3 +1,10 @@
+package Task;
+
+import Sorter.AbstractSorter;
+import Sorter.BubbleSorter;
+import Sorter.Comparator;
+import Task.Task;
+
 import java.util.Vector;
 
 public class SortingTask extends Task {

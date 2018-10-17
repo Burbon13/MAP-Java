@@ -1,8 +1,12 @@
+package Sorter;
+
+import Sorter.AbstractSorter;
+
 import java.util.Collections;
 import java.util.Vector;
 
 public class QuickSorter extends AbstractSorter {
-    QuickSorter(Comparator comparator) {
+    public QuickSorter(Comparator comparator) {
         super(comparator);
     }
 

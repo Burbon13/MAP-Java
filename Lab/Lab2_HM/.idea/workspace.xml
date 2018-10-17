@@ -2,33 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9bc66d3-79e4-4a2b-800c-9244554adb50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DelayTaskRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrinterTaskRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1_HM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1_HM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/src/com/company/BaseDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/src/com/company/Discount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/src/com/company/ExtraDiscount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/src/com/company/FruitsDiscount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/src/com/company/PriceDiscount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/src/com/company/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/src/com/company/QuantityDiscount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Extra/Decorator/src/com/company/StrategyDiscount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab2_HM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lab2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/Seminar1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/AbstractTaskRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/Container.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/Factory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/PrinterTaskRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/QueueContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/Seminar1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/StackContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/Strategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/StrategyTaskRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/TaskContainerFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Seminar/src/TaskRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbstractContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/AbstractContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbstractSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/AbstractSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AbstractTaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner/AbstractTaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BubbleSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/BubbleSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Comparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/Comparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DelayTaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner/DelayTaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MessageTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task/MessageTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrinterTaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner/PrinterTaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QueueContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/QueueContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/QuickSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/QuickSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task/SortingTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StackContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/StackContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Strategy/Strategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StrategyTaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner/StrategyTaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TaskContainerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory/TaskContainerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TaskRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner/TaskRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Seminar/Seminar3" beforeDir="false" afterPath="$PROJECT_DIR$/../../Seminar/Seminar3" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,404 +41,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="uml://JAVA/AbstractContainer">
-                <provider selected="true" editor-type-id="UmlEditorProvider">
-                  <state>
-                    <ID>JAVA</ID>
-                    <OriginalElement>AbstractContainer</OriginalElement>
-                    <nodes>
-                      <node x="811.799642024642" y="0.0">Task</node>
-                      <node x="425.97708853646327" y="220.0">AbstractContainer</node>
-                      <node x="507.89964202464205" y="310.0">QueueContainer</node>
-                      <node x="247.44130869130868" y="310.0">Factory</node>
-                      <node x="1086.2030864968365" y="310.0">AbstractSorter</node>
-                      <node x="858.299642024642" y="490.0">DelayTaskRunner</node>
-                      <node x="764.4056599650347" y="410.0">AbstractTaskRunner</node>
-                      <node x="266.2270885364634" y="410.0">TaskContainerFactory</node>
-                      <node x="1124.0913086913088" y="220.0">Comparator</node>
-                      <node x="760.049642024642" y="310.0">TaskRunner</node>
-                      <node x="0.0" y="0.0">java.io.Serializable</node>
-                      <node x="271.2270885364634" y="490.0">StrategyTaskRunner</node>
-                      <node x="693.299642024642" y="490.0">PrinterTaskRunner</node>
-                      <node x="262.6022154928404" y="130.0">Container</node>
-                      <node x="1374.3605394605393" y="130.0">MessageTask</node>
-                      <node x="90.8522154928404" y="130.0">java.lang.Enum</node>
-                      <node x="359.89964202464205" y="310.0">StackContainer</node>
-                      <node x="1237.5913086913085" y="410.0">QuickSorter</node>
-                      <node x="104.6022154928404" y="220.0">Strategy</node>
-                      <node x="126.0" y="0.0">java.lang.Comparable</node>
-                      <node x="1002.9056599650348" y="620.0">Main</node>
-                      <node x="1101.5913086913085" y="410.0">BubbleSorter</node>
-                      <node x="1018.299642024642" y="490.0">SortingTask</node>
-                    </nodes>
-                    <notes />
-                    <edges>
-                      <edge source="DelayTaskRunner" target="AbstractTaskRunner">
-                        <point x="0.0" y="-15.0" />
-                        <point x="927.799642024642" y="470.0" />
-                        <point x="899.1556599650347" y="470.0" />
-                        <point x="57.75" y="15.0" />
-                      </edge>
-                      <edge source="DelayTaskRunner" target="TaskRunner">
-                        <point x="46.33333333333337" y="-15.0" />
-                        <point x="974.1329753579753" y="470.0" />
-                        <point x="954.9188821595069" y="470.0" />
-                        <point x="954.9188821595069" y="380.0" />
-                        <point x="862.1924991674991" y="380.0" />
-                        <point x="47.14285714285711" y="15.0" />
-                      </edge>
-                      <edge source="StrategyTaskRunner" target="TaskContainerFactory">
-                        <point x="0.0" y="-15.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="QuickSorter" target="Comparator">
-                        <point x="36.666666666666686" y="-15.0" />
-                        <point x="1329.2579753579753" y="390.0" />
-                        <point x="1319.9188821595071" y="390.0" />
-                        <point x="1319.9188821595071" y="280.0" />
-                        <point x="1208.0913086913088" y="280.0" />
-                        <point x="28.0" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="BubbleSorter">
-                        <point x="11.538461538461547" y="-15.0" />
-                        <point x="1051.9441215034963" y="560.0" />
-                        <point x="1188.5913086913085" y="560.0" />
-                        <point x="29.0" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="Strategy">
-                        <point x="-34.615384615384585" y="-15.0" />
-                        <point x="1005.7902753496502" y="600.0" />
-                        <point x="127.7272154928404" y="600.0" />
-                        <point x="127.7272154928404" y="290.0" />
-                        <point x="115.9772154928404" y="290.0" />
-                        <point x="-34.125" y="15.0" />
-                      </edge>
-                      <edge source="SortingTask" target="BubbleSorter">
-                        <point x="45.83333333333333" y="-15.0" />
-                        <point x="1119.1329753579753" y="470.0" />
-                        <point x="1130.5913086913085" y="470.0" />
-                        <point x="-29.0" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="QuickSorter">
-                        <point x="17.30769230769232" y="-15.0" />
-                        <point x="1057.7133522727272" y="570.0" />
-                        <point x="1292.5913086913085" y="570.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="TaskContainerFactory" target="StackContainer">
-                        <point x="32.59999999999991" y="-15.0" />
-                        <point x="380.3270885364633" y="380.0" />
-                        <point x="423.89964202464205" y="380.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="StrategyTaskRunner" target="TaskRunner">
-                        <point x="61.200000000000045" y="-15.0" />
-                        <point x="408.92708853646343" y="470.0" />
-                        <point x="664.3996420246419" y="470.0" />
-                        <point x="664.3996420246419" y="360.0" />
-                        <point x="767.9067848817849" y="360.0" />
-                        <point x="-47.14285714285711" y="15.0" />
-                      </edge>
-                      <edge source="TaskContainerFactory" target="Container">
-                        <point x="0.0" y="-15.0" />
-                        <point x="347.7270885364634" y="390.0" />
-                        <point x="344.9413086913087" y="390.0" />
-                        <point x="344.9413086913087" y="200.0" />
-                        <point x="325.1022154928404" y="200.0" />
-                        <point x="12.5" y="15.0" />
-                      </edge>
-                      <edge source="TaskRunner" target="Task">
-                        <point x="0.0" y="-15.0" />
-                        <point x="815.049642024642" y="110.0" />
-                        <point x="845.2282134532134" y="110.0" />
-                        <point x="-2.571428571428555" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="TaskRunner">
-                        <point x="-23.076923076923094" y="-15.0" />
-                        <point x="1017.3287368881117" y="580.0" />
-                        <point x="682.799642024642" y="580.0" />
-                        <point x="682.799642024642" y="370.0" />
-                        <point x="783.6210705960705" y="370.0" />
-                        <point x="-31.428571428571445" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="MessageTask">
-                        <point x="34.615384615384585" y="-15.0" />
-                        <point x="1075.0210445804194" y="600.0" />
-                        <point x="1433.3605394605393" y="600.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="QueueContainer" target="Task">
-                        <point x="45.0" y="-15.0" />
-                        <point x="620.399642024642" y="290.0" />
-                        <point x="607.649642024642" y="290.0" />
-                        <point x="607.649642024642" y="90.0" />
-                        <point x="834.9424991674991" y="90.0" />
-                        <point x="-12.85714285714289" y="15.0" />
-                      </edge>
-                      <edge source="java.lang.Enum" target="java.lang.Enum">
-                        <point x="-19.75" y="15.0" />
-                        <point x="110.6022154928404" y="180.0" />
-                        <point x="70.8522154928404" y="180.0" />
-                        <point x="70.8522154928404" y="145.0" />
-                        <point x="-39.5" y="-0.0" />
-                      </edge>
-                      <edge source="StrategyTaskRunner" target="Strategy">
-                        <point x="-61.200000000000045" y="-15.0" />
-                        <point x="286.52708853646334" y="470.0" />
-                        <point x="138.7272154928404" y="470.0" />
-                        <point x="-11.375" y="15.0" />
-                      </edge>
-                      <edge source="TaskContainerFactory" target="Factory">
-                        <point x="-32.59999999999991" y="-15.0" />
-                        <point x="315.1270885364635" y="390.0" />
-                        <point x="290.9413086913087" y="390.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="java.lang.Enum" target="java.lang.Comparable">
-                        <point x="19.75" y="-15.0" />
-                        <point x="150.1022154928404" y="110.0" />
-                        <point x="182.5" y="110.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="SortingTask">
-                        <point x="0.0" y="-15.0" />
-                        <point x="1040.4056599650348" y="540.0" />
-                        <point x="1045.799642024642" y="540.0" />
-                        <point x="-27.5" y="15.0" />
-                      </edge>
-                      <edge source="BubbleSorter" target="AbstractSorter">
-                        <point x="0.0" y="-15.0" />
-                        <point x="1159.5913086913085" y="390.0" />
-                        <point x="1157.9530864968365" y="390.0" />
-                        <point x="10.25" y="15.0" />
-                      </edge>
-                      <edge source="Strategy" target="java.lang.Enum">
-                        <point x="0.0" y="-15.0" />
-                        <point x="19.75" y="15.0" />
-                      </edge>
-                      <edge source="MessageTask" target="Task">
-                        <point x="29.5" y="-15.0" />
-                        <point x="1462.8605394605393" y="50.0" />
-                        <point x="881.2282134532134" y="50.0" />
-                        <point x="33.428571428571445" y="15.0" />
-                      </edge>
-                      <edge source="TaskContainerFactory" target="Strategy">
-                        <point x="-65.20000000000005" y="-15.0" />
-                        <point x="282.52708853646334" y="390.0" />
-                        <point x="236.94130869130868" y="390.0" />
-                        <point x="236.94130869130868" y="290.0" />
-                        <point x="161.4772154928404" y="290.0" />
-                        <point x="11.375" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="DelayTaskRunner">
-                        <point x="-11.538461538461547" y="-15.0" />
-                        <point x="1028.8671984265732" y="560.0" />
-                        <point x="927.799642024642" y="560.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="Container" target="Task">
-                        <point x="0.0" y="-15.0" />
-                        <point x="312.6022154928404" y="50.0" />
-                        <point x="814.3710705960705" y="50.0" />
-                        <point x="-33.428571428571445" y="15.0" />
-                      </edge>
-                      <edge source="AbstractContainer" target="Task">
-                        <point x="0.0" y="-15.0" />
-                        <point x="497.97708853646327" y="200.0" />
-                        <point x="500.6190476190476" y="200.0" />
-                        <point x="500.6190476190476" y="70.0" />
-                        <point x="824.6567848817849" y="70.0" />
-                        <point x="-23.14285714285711" y="15.0" />
-                      </edge>
-                      <edge source="SortingTask" target="Task">
-                        <point x="-45.833333333333314" y="-15.0" />
-                        <point x="1027.4663086913088" y="470.0" />
-                        <point x="1032.0190476190476" y="470.0" />
-                        <point x="1032.0190476190476" y="90.0" />
-                        <point x="860.6567848817849" y="90.0" />
-                        <point x="12.85714285714289" y="15.0" />
-                      </edge>
-                      <edge source="SortingTask" target="Comparator">
-                        <point x="-9.166666666666686" y="-15.0" />
-                        <point x="1064.1329753579753" y="470.0" />
-                        <point x="1056.7163086913085" y="470.0" />
-                        <point x="1056.7163086913085" y="280.0" />
-                        <point x="1133.424642024642" y="280.0" />
-                        <point x="-46.666666666666686" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="StrategyTaskRunner">
-                        <point x="-28.846153846153868" y="-15.0" />
-                        <point x="1011.5595061188809" y="590.0" />
-                        <point x="347.7270885364634" y="590.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="AbstractContainer" target="Container">
-                        <point x="-48.0" y="-15.0" />
-                        <point x="449.97708853646327" y="200.0" />
-                        <point x="350.1022154928404" y="200.0" />
-                        <point x="37.5" y="15.0" />
-                      </edge>
-                      <edge source="AbstractSorter" target="Comparator">
-                        <point x="30.75" y="-15.0" />
-                        <point x="1178.4530864968365" y="290.0" />
-                        <point x="1170.7579753579753" y="290.0" />
-                        <point x="-9.333333333333343" y="15.0" />
-                      </edge>
-                      <edge source="AbstractTaskRunner" target="TaskRunner">
-                        <point x="19.25" y="-15.0" />
-                        <point x="860.6556599650347" y="390.0" />
-                        <point x="846.4782134532134" y="390.0" />
-                        <point x="31.428571428571445" y="15.0" />
-                      </edge>
-                      <edge source="Factory" target="Strategy">
-                        <point x="-21.75" y="-15.0" />
-                        <point x="269.1913086913087" y="280.0" />
-                        <point x="184.2272154928404" y="280.0" />
-                        <point x="34.125" y="15.0" />
-                      </edge>
-                      <edge source="java.lang.Enum" target="java.io.Serializable">
-                        <point x="-19.75" y="-15.0" />
-                        <point x="110.6022154928404" y="110.0" />
-                        <point x="53.0" y="110.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="Comparator">
-                        <point x="23.076923076923094" y="-15.0" />
-                        <point x="1063.482583041958" y="580.0" />
-                        <point x="1358.0913086913088" y="580.0" />
-                        <point x="1358.0913086913088" y="270.0" />
-                        <point x="1226.7579753579753" y="270.0" />
-                        <point x="46.666666666666686" y="15.0" />
-                      </edge>
-                      <edge source="BubbleSorter" target="Comparator">
-                        <point x="38.666666666666686" y="-15.0" />
-                        <point x="1198.2579753579753" y="390.0" />
-                        <point x="1219.7030864968365" y="390.0" />
-                        <point x="1219.7030864968365" y="290.0" />
-                        <point x="1189.424642024642" y="290.0" />
-                        <point x="9.333333333333314" y="15.0" />
-                      </edge>
-                      <edge source="PrinterTaskRunner" target="TaskRunner">
-                        <point x="-48.33333333333337" y="-15.0" />
-                        <point x="717.4663086913085" y="470.0" />
-                        <point x="731.674642024642" y="470.0" />
-                        <point x="731.674642024642" y="380.0" />
-                        <point x="799.3353563103562" y="380.0" />
-                        <point x="-15.714285714285666" y="15.0" />
-                      </edge>
-                      <edge source="PrinterTaskRunner" target="AbstractTaskRunner">
-                        <point x="48.33333333333337" y="-15.0" />
-                        <point x="814.1329753579753" y="470.0" />
-                        <point x="822.1556599650347" y="470.0" />
-                        <point x="-19.25" y="15.0" />
-                      </edge>
-                      <edge source="QuickSorter" target="AbstractSorter">
-                        <point x="0.0" y="-15.0" />
-                        <point x="1292.5913086913085" y="370.0" />
-                        <point x="1198.9530864968365" y="370.0" />
-                        <point x="51.25" y="15.0" />
-                      </edge>
-                      <edge source="TaskContainerFactory" target="QueueContainer">
-                        <point x="65.20000000000005" y="-15.0" />
-                        <point x="412.92708853646343" y="390.0" />
-                        <point x="575.399642024642" y="390.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="StrategyTaskRunner" target="Container">
-                        <point x="-30.600000000000023" y="-15.0" />
-                        <point x="317.12708853646336" y="460.0" />
-                        <point x="218.0413086913087" y="460.0" />
-                        <point x="218.0413086913087" y="200.0" />
-                        <point x="275.1022154928404" y="200.0" />
-                        <point x="-37.5" y="15.0" />
-                      </edge>
-                      <edge source="StackContainer" target="AbstractContainer">
-                        <point x="42.66666666666663" y="-15.0" />
-                        <point x="466.5663086913087" y="290.0" />
-                        <point x="479.97708853646327" y="290.0" />
-                        <point x="-18.0" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="PrinterTaskRunner">
-                        <point x="-17.30769230769232" y="-15.0" />
-                        <point x="1023.0979676573425" y="570.0" />
-                        <point x="765.799642024642" y="570.0" />
-                        <point x="0.0" y="15.0" />
-                      </edge>
-                      <edge source="QueueContainer" target="AbstractContainer">
-                        <point x="-45.0" y="-15.0" />
-                        <point x="530.399642024642" y="290.0" />
-                        <point x="515.9770885364633" y="290.0" />
-                        <point x="18.0" y="15.0" />
-                      </edge>
-                      <edge source="SortingTask" target="AbstractSorter">
-                        <point x="27.5" y="-15.0" />
-                        <point x="1100.799642024642" y="460.0" />
-                        <point x="1086.1329753579753" y="460.0" />
-                        <point x="1086.1329753579753" y="380.0" />
-                        <point x="1116.9530864968365" y="380.0" />
-                        <point x="-30.75" y="15.0" />
-                      </edge>
-                      <edge source="StrategyTaskRunner" target="Task">
-                        <point x="30.600000000000023" y="-15.0" />
-                        <point x="378.3270885364634" y="460.0" />
-                        <point x="653.399642024642" y="460.0" />
-                        <point x="653.399642024642" y="100.0" />
-                        <point x="840.0853563103562" y="100.0" />
-                        <point x="-7.714285714285666" y="15.0" />
-                      </edge>
-                      <edge source="AbstractTaskRunner" target="Task">
-                        <point x="57.75" y="-15.0" />
-                        <point x="899.1556599650347" y="390.0" />
-                        <point x="880.549642024642" y="390.0" />
-                        <point x="880.549642024642" y="110.0" />
-                        <point x="850.3710705960705" y="110.0" />
-                        <point x="2.571428571428555" y="15.0" />
-                      </edge>
-                      <edge source="Main" target="Task">
-                        <point x="-5.769230769230774" y="-15.0" />
-                        <point x="1034.6364291958039" y="550.0" />
-                        <point x="1007.799642024642" y="550.0" />
-                        <point x="1007.799642024642" y="100.0" />
-                        <point x="855.5139277389278" y="100.0" />
-                        <point x="7.714285714285779" y="15.0" />
-                      </edge>
-                      <edge source="Factory" target="Container">
-                        <point x="21.75" y="-15.0" />
-                        <point x="312.6913086913087" y="200.0" />
-                        <point x="300.1022154928404" y="200.0" />
-                        <point x="-12.5" y="15.0" />
-                      </edge>
-                      <edge source="StackContainer" target="Task">
-                        <point x="-42.66666666666663" y="-15.0" />
-                        <point x="381.2329753579754" y="290.0" />
-                        <point x="393.44118173493166" y="290.0" />
-                        <point x="393.44118173493166" y="60.0" />
-                        <point x="819.5139277389276" y="60.0" />
-                        <point x="-28.285714285714334" y="15.0" />
-                      </edge>
-                    </edges>
-                    <settings layout="Hierarchic Group" zoom="0.9408544726301745" x="739.7452457009679" y="437.33769155669063" />
-                    <SelectedNodes>
-                      <node>Task</node>
-                    </SelectedNodes>
-                    <Categories />
-                    <SCOPE>All</SCOPE>
-                    <VISIBILITY>private</VISIBILITY>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1996572449">
@@ -448,38 +55,40 @@
     <session id="-631816133">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="JAVA/" value="1" />
-          <entry key="JAVA/AbstractContainer" value="6" />
+          <entry key="JAVA/AbstractContainer" value="8" />
           <entry key="JAVA/AbstractTaskRunner" value="1" />
           <entry key="JAVA/Container" value="1" />
-          <entry key="JAVA/Factory" value="1" />
+          <entry key="JAVA/Factory" value="2" />
           <entry key="JAVA/SortingTask" value="2" />
-          <entry key="java" value="34" />
+          <entry key="java" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="34" />
-          <entry key="UML" value="12" />
+          <entry key="JAVA" value="58" />
+          <entry key="UML" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="534" />
+          <entry key="java" value="980" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="534" />
+          <entry key="JAVA" value="980" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -487,96 +96,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="uml://JAVA/AbstractTaskRunner">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement>AbstractTaskRunner</OriginalElement>
-              <nodes>
-                <node x="250.5" y="80.0">StrategyTaskRunner</node>
-                <node x="0.0" y="160.0">PrinterTaskRunner</node>
-                <node x="165.0" y="160.0">DelayTaskRunner</node>
-                <node x="76.5" y="80.0">AbstractTaskRunner</node>
-                <node x="185.25" y="0.0">TaskRunner</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="DelayTaskRunner" target="AbstractTaskRunner">
-                  <point x="0.0" y="-15.0" />
-                  <point x="234.5" y="135.0" />
-                  <point x="192.0" y="135.0" />
-                  <point x="38.5" y="15.0" />
-                </edge>
-                <edge source="AbstractTaskRunner" target="TaskRunner">
-                  <point x="0.0" y="-15.0" />
-                  <point x="153.5" y="55.0" />
-                  <point x="212.75" y="55.0" />
-                  <point x="-27.5" y="15.0" />
-                </edge>
-                <edge source="StrategyTaskRunner" target="TaskRunner">
-                  <point x="0.0" y="-15.0" />
-                  <point x="327.0" y="55.0" />
-                  <point x="267.75" y="55.0" />
-                  <point x="27.5" y="15.0" />
-                </edge>
-                <edge source="PrinterTaskRunner" target="AbstractTaskRunner">
-                  <point x="0.0" y="-15.0" />
-                  <point x="72.5" y="135.0" />
-                  <point x="115.0" y="135.0" />
-                  <point x="-38.5" y="15.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-258.0" y="-99.5" />
-              <SelectedNodes />
-              <Categories />
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TaskRunner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AbstractTaskRunner.java">
+        <entry file="file://$PROJECT_DIR$/src/Runner/TaskRunner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StrategyTaskRunner.java">
+        <entry file="file://$PROJECT_DIR$/src/Runner/StrategyTaskRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PrinterTaskRunner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="102">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -585,14 +127,79 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DelayTaskRunner.java">
+        <entry file="file://$PROJECT_DIR$/src/Task/SortingTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state relative-caret-position="17">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding>
-                <element signature="e#107#108#0" expanded="true" />
-                <element signature="e#140#141#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sorter/AbstractSorter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Sorter/BubbleSorter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sorter/QuickSorter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Runner/AbstractTaskRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Container/AbstractContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Factory/TaskContainerFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -614,11 +221,22 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Task.java" />
-        <option value="$PROJECT_DIR$/src/Task.java" />
         <option value="$PROJECT_DIR$/src/PrintTaskRunner.java" />
         <option value="$PROJECT_DIR$/src/DelayTaskRunner.java" />
         <option value="$PROJECT_DIR$/src/PrinterTaskRunner.java" />
+        <option value="$PROJECT_DIR$/src/Task.java" />
+        <option value="$PROJECT_DIR$/src/Task/MessageTask.java" />
+        <option value="$PROJECT_DIR$/src/AbstractSorter.java" />
+        <option value="$PROJECT_DIR$/src/Sorter/AbstractSorter.java" />
+        <option value="$PROJECT_DIR$/src/Factory/TaskContainerFactory.java" />
+        <option value="$PROJECT_DIR$/src/Factory/Factory.java" />
+        <option value="$PROJECT_DIR$/src/Runner/AbstractTaskRunner.java" />
+        <option value="$PROJECT_DIR$/src/Runner/TaskRunner.java" />
+        <option value="$PROJECT_DIR$/src/Runner/StrategyTaskRunner.java" />
+        <option value="$PROJECT_DIR$/src/Sorter/BubbleSorter.java" />
+        <option value="$PROJECT_DIR$/src/Sorter/QuickSorter.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Task/SortingTask.java" />
       </list>
     </option>
   </component>
@@ -628,9 +246,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="166" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -653,6 +277,42 @@
               <item name="Lab2_HM" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Lab2_HM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2_HM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Container" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab2_HM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2_HM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab2_HM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2_HM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Runner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab2_HM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2_HM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Sorter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab2_HM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2_HM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Strategy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab2_HM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2_HM" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Task" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -663,7 +323,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539700533774" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539756209916" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -707,12 +367,14 @@
       <updated>1539683226440</updated>
       <workItem from="1539683229823" duration="119000" />
       <workItem from="1539683417325" duration="4967000" />
-      <workItem from="1539697723854" duration="3255000" />
+      <workItem from="1539697723854" duration="3903000" />
+      <workItem from="1539702007206" duration="90000" />
+      <workItem from="1539702494019" duration="12150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8341000" />
+    <option name="totallyTimeSpent" value="21229000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -724,9 +386,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="166" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.195629" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -734,7 +397,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33261105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -753,7 +416,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,20 +427,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Lab2.java" />
-    <entry file="file://$PROJECT_DIR$/src/BubbleSorter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -822,43 +471,6 @@
           <notes />
           <edges />
           <settings layout="Hierarchic Group" zoom="1.0635135135135134" x="363.0" y="337.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Factory">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Factory</OriginalElement>
-          <nodes>
-            <node x="" y="">Task</node>
-            <node x="" y="">AbstractContainer</node>
-            <node x="" y="">QueueContainer</node>
-            <node x="" y="">Factory</node>
-            <node x="" y="">AbstractSorter</node>
-            <node x="" y="">AbstractTaskRunner</node>
-            <node x="" y="">TaskContainerFactory</node>
-            <node x="" y="">Comparator</node>
-            <node x="" y="">java.io.Serializable</node>
-            <node x="" y="">TaskRunner</node>
-            <node x="" y="">MessageTask</node>
-            <node x="" y="">Container</node>
-            <node x="" y="">StrategyTaskRunner</node>
-            <node x="" y="">java.lang.Enum</node>
-            <node x="" y="">StackContainer</node>
-            <node x="" y="">QuickSorter</node>
-            <node x="" y="">Strategy</node>
-            <node x="" y="">java.lang.Comparable</node>
-            <node x="" y="">BubbleSorter</node>
-            <node x="" y="">SortingTask</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="284.0" y="351.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -915,79 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Task.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SortingTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractSorter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MessageTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QueueContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StackContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/QuickSorter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TaskContainerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="54" selection-start-column="54" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/AbstractTaskRunner">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1027,53 +566,11 @@
               <point x="-38.5" y="15.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-258.0" y="-99.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-258.0" y="-99.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DelayTaskRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding>
-            <element signature="e#107#108#0" expanded="true" />
-            <element signature="e#140#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrinterTaskRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StrategyTaskRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AbstractTaskRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TaskRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1083,390 +580,244 @@
           <ID>JAVA</ID>
           <OriginalElement>AbstractContainer</OriginalElement>
           <nodes>
-            <node x="811.799642024642" y="0.0">Task</node>
-            <node x="425.97708853646327" y="220.0">AbstractContainer</node>
-            <node x="507.89964202464205" y="310.0">QueueContainer</node>
-            <node x="247.44130869130868" y="310.0">Factory</node>
-            <node x="1086.2030864968365" y="310.0">AbstractSorter</node>
-            <node x="858.299642024642" y="490.0">DelayTaskRunner</node>
-            <node x="764.4056599650347" y="410.0">AbstractTaskRunner</node>
-            <node x="266.2270885364634" y="410.0">TaskContainerFactory</node>
-            <node x="1124.0913086913088" y="220.0">Comparator</node>
-            <node x="760.049642024642" y="310.0">TaskRunner</node>
-            <node x="0.0" y="0.0">java.io.Serializable</node>
-            <node x="271.2270885364634" y="490.0">StrategyTaskRunner</node>
-            <node x="693.299642024642" y="490.0">PrinterTaskRunner</node>
-            <node x="262.6022154928404" y="130.0">Container</node>
-            <node x="1374.3605394605393" y="130.0">MessageTask</node>
-            <node x="90.8522154928404" y="130.0">java.lang.Enum</node>
-            <node x="359.89964202464205" y="310.0">StackContainer</node>
-            <node x="1237.5913086913085" y="410.0">QuickSorter</node>
-            <node x="104.6022154928404" y="220.0">Strategy</node>
-            <node x="126.0" y="0.0">java.lang.Comparable</node>
-            <node x="1002.9056599650348" y="620.0">Main</node>
-            <node x="1101.5913086913085" y="410.0">BubbleSorter</node>
-            <node x="1018.299642024642" y="490.0">SortingTask</node>
+            <node x="" y="">Task</node>
+            <node x="" y="">AbstractContainer</node>
+            <node x="" y="">QueueContainer</node>
+            <node x="" y="">AbstractSorter</node>
+            <node x="" y="">Factory</node>
+            <node x="" y="">DelayTaskRunner</node>
+            <node x="" y="">AbstractTaskRunner</node>
+            <node x="" y="">TaskContainerFactory</node>
+            <node x="" y="">Comparator</node>
+            <node x="" y="">TaskRunner</node>
+            <node x="" y="">java.io.Serializable</node>
+            <node x="" y="">PrinterTaskRunner</node>
+            <node x="" y="">Container</node>
+            <node x="" y="">StrategyTaskRunner</node>
+            <node x="" y="">MessageTask</node>
+            <node x="" y="">java.lang.Enum</node>
+            <node x="" y="">StackContainer</node>
+            <node x="" y="">QuickSorter</node>
+            <node x="" y="">Strategy</node>
+            <node x="" y="">java.lang.Comparable</node>
+            <node x="" y="">BubbleSorter</node>
+            <node x="" y="">Main</node>
+            <node x="" y="">SortingTask</node>
           </nodes>
           <notes />
-          <edges>
-            <edge source="DelayTaskRunner" target="AbstractTaskRunner">
-              <point x="0.0" y="-15.0" />
-              <point x="927.799642024642" y="470.0" />
-              <point x="899.1556599650347" y="470.0" />
-              <point x="57.75" y="15.0" />
-            </edge>
-            <edge source="DelayTaskRunner" target="TaskRunner">
-              <point x="46.33333333333337" y="-15.0" />
-              <point x="974.1329753579753" y="470.0" />
-              <point x="954.9188821595069" y="470.0" />
-              <point x="954.9188821595069" y="380.0" />
-              <point x="862.1924991674991" y="380.0" />
-              <point x="47.14285714285711" y="15.0" />
-            </edge>
-            <edge source="StrategyTaskRunner" target="TaskContainerFactory">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="QuickSorter" target="Comparator">
-              <point x="36.666666666666686" y="-15.0" />
-              <point x="1329.2579753579753" y="390.0" />
-              <point x="1319.9188821595071" y="390.0" />
-              <point x="1319.9188821595071" y="280.0" />
-              <point x="1208.0913086913088" y="280.0" />
-              <point x="28.0" y="15.0" />
-            </edge>
-            <edge source="Main" target="BubbleSorter">
-              <point x="11.538461538461547" y="-15.0" />
-              <point x="1051.9441215034963" y="560.0" />
-              <point x="1188.5913086913085" y="560.0" />
-              <point x="29.0" y="15.0" />
-            </edge>
-            <edge source="Main" target="Strategy">
-              <point x="-34.615384615384585" y="-15.0" />
-              <point x="1005.7902753496502" y="600.0" />
-              <point x="127.7272154928404" y="600.0" />
-              <point x="127.7272154928404" y="290.0" />
-              <point x="115.9772154928404" y="290.0" />
-              <point x="-34.125" y="15.0" />
-            </edge>
-            <edge source="SortingTask" target="BubbleSorter">
-              <point x="45.83333333333333" y="-15.0" />
-              <point x="1119.1329753579753" y="470.0" />
-              <point x="1130.5913086913085" y="470.0" />
-              <point x="-29.0" y="15.0" />
-            </edge>
-            <edge source="Main" target="QuickSorter">
-              <point x="17.30769230769232" y="-15.0" />
-              <point x="1057.7133522727272" y="570.0" />
-              <point x="1292.5913086913085" y="570.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="TaskContainerFactory" target="StackContainer">
-              <point x="32.59999999999991" y="-15.0" />
-              <point x="380.3270885364633" y="380.0" />
-              <point x="423.89964202464205" y="380.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="StrategyTaskRunner" target="TaskRunner">
-              <point x="61.200000000000045" y="-15.0" />
-              <point x="408.92708853646343" y="470.0" />
-              <point x="664.3996420246419" y="470.0" />
-              <point x="664.3996420246419" y="360.0" />
-              <point x="767.9067848817849" y="360.0" />
-              <point x="-47.14285714285711" y="15.0" />
-            </edge>
-            <edge source="TaskContainerFactory" target="Container">
-              <point x="0.0" y="-15.0" />
-              <point x="347.7270885364634" y="390.0" />
-              <point x="344.9413086913087" y="390.0" />
-              <point x="344.9413086913087" y="200.0" />
-              <point x="325.1022154928404" y="200.0" />
-              <point x="12.5" y="15.0" />
-            </edge>
-            <edge source="TaskRunner" target="Task">
-              <point x="0.0" y="-15.0" />
-              <point x="815.049642024642" y="110.0" />
-              <point x="845.2282134532134" y="110.0" />
-              <point x="-2.571428571428555" y="15.0" />
-            </edge>
-            <edge source="Main" target="TaskRunner">
-              <point x="-23.076923076923094" y="-15.0" />
-              <point x="1017.3287368881117" y="580.0" />
-              <point x="682.799642024642" y="580.0" />
-              <point x="682.799642024642" y="370.0" />
-              <point x="783.6210705960705" y="370.0" />
-              <point x="-31.428571428571445" y="15.0" />
-            </edge>
-            <edge source="Main" target="MessageTask">
-              <point x="34.615384615384585" y="-15.0" />
-              <point x="1075.0210445804194" y="600.0" />
-              <point x="1433.3605394605393" y="600.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="QueueContainer" target="Task">
-              <point x="45.0" y="-15.0" />
-              <point x="620.399642024642" y="290.0" />
-              <point x="607.649642024642" y="290.0" />
-              <point x="607.649642024642" y="90.0" />
-              <point x="834.9424991674991" y="90.0" />
-              <point x="-12.85714285714289" y="15.0" />
-            </edge>
-            <edge source="java.lang.Enum" target="java.lang.Enum">
-              <point x="-19.75" y="15.0" />
-              <point x="110.6022154928404" y="180.0" />
-              <point x="70.8522154928404" y="180.0" />
-              <point x="70.8522154928404" y="145.0" />
-              <point x="-39.5" y="-0.0" />
-            </edge>
-            <edge source="StrategyTaskRunner" target="Strategy">
-              <point x="-61.200000000000045" y="-15.0" />
-              <point x="286.52708853646334" y="470.0" />
-              <point x="138.7272154928404" y="470.0" />
-              <point x="-11.375" y="15.0" />
-            </edge>
-            <edge source="TaskContainerFactory" target="Factory">
-              <point x="-32.59999999999991" y="-15.0" />
-              <point x="315.1270885364635" y="390.0" />
-              <point x="290.9413086913087" y="390.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="java.lang.Enum" target="java.lang.Comparable">
-              <point x="19.75" y="-15.0" />
-              <point x="150.1022154928404" y="110.0" />
-              <point x="182.5" y="110.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="Main" target="SortingTask">
-              <point x="0.0" y="-15.0" />
-              <point x="1040.4056599650348" y="540.0" />
-              <point x="1045.799642024642" y="540.0" />
-              <point x="-27.5" y="15.0" />
-            </edge>
-            <edge source="BubbleSorter" target="AbstractSorter">
-              <point x="0.0" y="-15.0" />
-              <point x="1159.5913086913085" y="390.0" />
-              <point x="1157.9530864968365" y="390.0" />
-              <point x="10.25" y="15.0" />
-            </edge>
-            <edge source="Strategy" target="java.lang.Enum">
-              <point x="0.0" y="-15.0" />
-              <point x="19.75" y="15.0" />
-            </edge>
-            <edge source="MessageTask" target="Task">
-              <point x="29.5" y="-15.0" />
-              <point x="1462.8605394605393" y="50.0" />
-              <point x="881.2282134532134" y="50.0" />
-              <point x="33.428571428571445" y="15.0" />
-            </edge>
-            <edge source="TaskContainerFactory" target="Strategy">
-              <point x="-65.20000000000005" y="-15.0" />
-              <point x="282.52708853646334" y="390.0" />
-              <point x="236.94130869130868" y="390.0" />
-              <point x="236.94130869130868" y="290.0" />
-              <point x="161.4772154928404" y="290.0" />
-              <point x="11.375" y="15.0" />
-            </edge>
-            <edge source="Main" target="DelayTaskRunner">
-              <point x="-11.538461538461547" y="-15.0" />
-              <point x="1028.8671984265732" y="560.0" />
-              <point x="927.799642024642" y="560.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="Container" target="Task">
-              <point x="0.0" y="-15.0" />
-              <point x="312.6022154928404" y="50.0" />
-              <point x="814.3710705960705" y="50.0" />
-              <point x="-33.428571428571445" y="15.0" />
-            </edge>
-            <edge source="AbstractContainer" target="Task">
-              <point x="0.0" y="-15.0" />
-              <point x="497.97708853646327" y="200.0" />
-              <point x="500.6190476190476" y="200.0" />
-              <point x="500.6190476190476" y="70.0" />
-              <point x="824.6567848817849" y="70.0" />
-              <point x="-23.14285714285711" y="15.0" />
-            </edge>
-            <edge source="SortingTask" target="Task">
-              <point x="-45.833333333333314" y="-15.0" />
-              <point x="1027.4663086913088" y="470.0" />
-              <point x="1032.0190476190476" y="470.0" />
-              <point x="1032.0190476190476" y="90.0" />
-              <point x="860.6567848817849" y="90.0" />
-              <point x="12.85714285714289" y="15.0" />
-            </edge>
-            <edge source="SortingTask" target="Comparator">
-              <point x="-9.166666666666686" y="-15.0" />
-              <point x="1064.1329753579753" y="470.0" />
-              <point x="1056.7163086913085" y="470.0" />
-              <point x="1056.7163086913085" y="280.0" />
-              <point x="1133.424642024642" y="280.0" />
-              <point x="-46.666666666666686" y="15.0" />
-            </edge>
-            <edge source="Main" target="StrategyTaskRunner">
-              <point x="-28.846153846153868" y="-15.0" />
-              <point x="1011.5595061188809" y="590.0" />
-              <point x="347.7270885364634" y="590.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="AbstractContainer" target="Container">
-              <point x="-48.0" y="-15.0" />
-              <point x="449.97708853646327" y="200.0" />
-              <point x="350.1022154928404" y="200.0" />
-              <point x="37.5" y="15.0" />
-            </edge>
-            <edge source="AbstractSorter" target="Comparator">
-              <point x="30.75" y="-15.0" />
-              <point x="1178.4530864968365" y="290.0" />
-              <point x="1170.7579753579753" y="290.0" />
-              <point x="-9.333333333333343" y="15.0" />
-            </edge>
-            <edge source="AbstractTaskRunner" target="TaskRunner">
-              <point x="19.25" y="-15.0" />
-              <point x="860.6556599650347" y="390.0" />
-              <point x="846.4782134532134" y="390.0" />
-              <point x="31.428571428571445" y="15.0" />
-            </edge>
-            <edge source="Factory" target="Strategy">
-              <point x="-21.75" y="-15.0" />
-              <point x="269.1913086913087" y="280.0" />
-              <point x="184.2272154928404" y="280.0" />
-              <point x="34.125" y="15.0" />
-            </edge>
-            <edge source="java.lang.Enum" target="java.io.Serializable">
-              <point x="-19.75" y="-15.0" />
-              <point x="110.6022154928404" y="110.0" />
-              <point x="53.0" y="110.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="Main" target="Comparator">
-              <point x="23.076923076923094" y="-15.0" />
-              <point x="1063.482583041958" y="580.0" />
-              <point x="1358.0913086913088" y="580.0" />
-              <point x="1358.0913086913088" y="270.0" />
-              <point x="1226.7579753579753" y="270.0" />
-              <point x="46.666666666666686" y="15.0" />
-            </edge>
-            <edge source="BubbleSorter" target="Comparator">
-              <point x="38.666666666666686" y="-15.0" />
-              <point x="1198.2579753579753" y="390.0" />
-              <point x="1219.7030864968365" y="390.0" />
-              <point x="1219.7030864968365" y="290.0" />
-              <point x="1189.424642024642" y="290.0" />
-              <point x="9.333333333333314" y="15.0" />
-            </edge>
-            <edge source="PrinterTaskRunner" target="TaskRunner">
-              <point x="-48.33333333333337" y="-15.0" />
-              <point x="717.4663086913085" y="470.0" />
-              <point x="731.674642024642" y="470.0" />
-              <point x="731.674642024642" y="380.0" />
-              <point x="799.3353563103562" y="380.0" />
-              <point x="-15.714285714285666" y="15.0" />
-            </edge>
-            <edge source="PrinterTaskRunner" target="AbstractTaskRunner">
-              <point x="48.33333333333337" y="-15.0" />
-              <point x="814.1329753579753" y="470.0" />
-              <point x="822.1556599650347" y="470.0" />
-              <point x="-19.25" y="15.0" />
-            </edge>
-            <edge source="QuickSorter" target="AbstractSorter">
-              <point x="0.0" y="-15.0" />
-              <point x="1292.5913086913085" y="370.0" />
-              <point x="1198.9530864968365" y="370.0" />
-              <point x="51.25" y="15.0" />
-            </edge>
-            <edge source="TaskContainerFactory" target="QueueContainer">
-              <point x="65.20000000000005" y="-15.0" />
-              <point x="412.92708853646343" y="390.0" />
-              <point x="575.399642024642" y="390.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="StrategyTaskRunner" target="Container">
-              <point x="-30.600000000000023" y="-15.0" />
-              <point x="317.12708853646336" y="460.0" />
-              <point x="218.0413086913087" y="460.0" />
-              <point x="218.0413086913087" y="200.0" />
-              <point x="275.1022154928404" y="200.0" />
-              <point x="-37.5" y="15.0" />
-            </edge>
-            <edge source="StackContainer" target="AbstractContainer">
-              <point x="42.66666666666663" y="-15.0" />
-              <point x="466.5663086913087" y="290.0" />
-              <point x="479.97708853646327" y="290.0" />
-              <point x="-18.0" y="15.0" />
-            </edge>
-            <edge source="Main" target="PrinterTaskRunner">
-              <point x="-17.30769230769232" y="-15.0" />
-              <point x="1023.0979676573425" y="570.0" />
-              <point x="765.799642024642" y="570.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-            <edge source="QueueContainer" target="AbstractContainer">
-              <point x="-45.0" y="-15.0" />
-              <point x="530.399642024642" y="290.0" />
-              <point x="515.9770885364633" y="290.0" />
-              <point x="18.0" y="15.0" />
-            </edge>
-            <edge source="SortingTask" target="AbstractSorter">
-              <point x="27.5" y="-15.0" />
-              <point x="1100.799642024642" y="460.0" />
-              <point x="1086.1329753579753" y="460.0" />
-              <point x="1086.1329753579753" y="380.0" />
-              <point x="1116.9530864968365" y="380.0" />
-              <point x="-30.75" y="15.0" />
-            </edge>
-            <edge source="StrategyTaskRunner" target="Task">
-              <point x="30.600000000000023" y="-15.0" />
-              <point x="378.3270885364634" y="460.0" />
-              <point x="653.399642024642" y="460.0" />
-              <point x="653.399642024642" y="100.0" />
-              <point x="840.0853563103562" y="100.0" />
-              <point x="-7.714285714285666" y="15.0" />
-            </edge>
-            <edge source="AbstractTaskRunner" target="Task">
-              <point x="57.75" y="-15.0" />
-              <point x="899.1556599650347" y="390.0" />
-              <point x="880.549642024642" y="390.0" />
-              <point x="880.549642024642" y="110.0" />
-              <point x="850.3710705960705" y="110.0" />
-              <point x="2.571428571428555" y="15.0" />
-            </edge>
-            <edge source="Main" target="Task">
-              <point x="-5.769230769230774" y="-15.0" />
-              <point x="1034.6364291958039" y="550.0" />
-              <point x="1007.799642024642" y="550.0" />
-              <point x="1007.799642024642" y="100.0" />
-              <point x="855.5139277389278" y="100.0" />
-              <point x="7.714285714285779" y="15.0" />
-            </edge>
-            <edge source="Factory" target="Container">
-              <point x="21.75" y="-15.0" />
-              <point x="312.6913086913087" y="200.0" />
-              <point x="300.1022154928404" y="200.0" />
-              <point x="-12.5" y="15.0" />
-            </edge>
-            <edge source="StackContainer" target="Task">
-              <point x="-42.66666666666663" y="-15.0" />
-              <point x="381.2329753579754" y="290.0" />
-              <point x="393.44118173493166" y="290.0" />
-              <point x="393.44118173493166" y="60.0" />
-              <point x="819.5139277389276" y="60.0" />
-              <point x="-28.285714285714334" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.9408544726301745" x="739.7452457009679" y="437.33769155669063" />
-          <SelectedNodes>
-            <node>Task</node>
-          </SelectedNodes>
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="663.5" y="290.0" />
+          <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
+    <entry file="uml://JAVA/Factory">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Factory</OriginalElement>
+          <nodes>
+            <node x="" y="">Task</node>
+            <node x="" y="">AbstractContainer</node>
+            <node x="" y="">QueueContainer</node>
+            <node x="" y="">AbstractSorter</node>
+            <node x="" y="">Factory</node>
+            <node x="" y="">DelayTaskRunner</node>
+            <node x="" y="">AbstractTaskRunner</node>
+            <node x="" y="">TaskContainerFactory</node>
+            <node x="" y="">Comparator</node>
+            <node x="" y="">TaskRunner</node>
+            <node x="" y="">PrinterTaskRunner</node>
+            <node x="" y="">Container</node>
+            <node x="" y="">StrategyTaskRunner</node>
+            <node x="" y="">MessageTask</node>
+            <node x="" y="">StackContainer</node>
+            <node x="" y="">QuickSorter</node>
+            <node x="" y="">Strategy</node>
+            <node x="" y="">BubbleSorter</node>
+            <node x="" y="">SortingTask</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9000000000000009" x="425.5930719550823" y="433.8888888888886" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner/PrinterTaskRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner/DelayTaskRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#107#108#0" expanded="true" />
+            <element signature="e#140#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Task/MessageTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Task/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/QueueContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sorter/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Strategy/Strategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/StackContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Factory/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner/AbstractTaskRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner/TaskRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner/StrategyTaskRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sorter/QuickSorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Container/AbstractContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Factory/TaskContainerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Task/SortingTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sorter/AbstractSorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sorter/BubbleSorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

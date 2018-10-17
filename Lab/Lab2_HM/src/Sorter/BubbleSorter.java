@@ -1,8 +1,12 @@
+package Sorter;
+
+import Sorter.AbstractSorter;
+
 import java.util.Collections;
 import java.util.Vector;
 
 public class BubbleSorter extends AbstractSorter {
-    BubbleSorter(Comparator comparator) {
+    public BubbleSorter(Comparator comparator) {
         super(comparator);
     }
 

@@ -1,3 +1,7 @@
+package Runner;
+
+import Task.Task;
+
 public interface TaskRunner {
     void executeOneTask();
     void executeAll();
