@@ -9,7 +9,7 @@ import Validator.ValidationException;
 public interface CrudRepository<ID, E> {
 
     /**
-     * @param id - the id of the entity to be returned
+     * @param id the id of the entity to be returned
      *             id must not be null
      * @return the entity with the specific id or null
      *         if there is no entity with the given id
@@ -25,8 +25,8 @@ public interface CrudRepository<ID, E> {
 
 
     /**
-     * @param entity - must be not null
-     * @return null if the given entity is not saved
+     * @param entity must be not null
+     * @return null if the given entity is saved
      *         otherwise returns the entity (id already exists)
      * @throws ValidationException if the entity is not valid
      * @throws IllegalArgumentException if the given entity is null
@@ -36,7 +36,7 @@ public interface CrudRepository<ID, E> {
 
     /**
      * removes the entity with the specific id
-     * @param id - must be not null
+     * @param id must be not null
      * @return the removed entity or null if there is no entity with
      *         the given id
      * @throws IllegalArgumentException if the given id is null
@@ -45,10 +45,11 @@ public interface CrudRepository<ID, E> {
 
 
     /**
-     * @param entity - must be not null
+     * @param entity must be not null
      * @return null if the entity is updated, otherwise returns the
      *         entity (e.g. id does not exist)
      * @throws ValidationException if the entity is not valid
+     * @throws IllegalArgumentException if the entity is null
      */
-    E update(E entity) throws ValidationException;
+    E update(E entity) throws ValidationException, IllegalArgumentException;
 }
