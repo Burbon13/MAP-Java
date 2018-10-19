@@ -23,9 +23,7 @@ public class Student implements HasID<Integer> {
     }
 
     @Override
-    public void setID(Integer studentID) throws IllegalArgumentException {
-        if(studentID == null)
-            throw new IllegalArgumentException("studentID cannot be null");
+    public void setID(Integer studentID) {
         this.studentID = studentID;
     }
 

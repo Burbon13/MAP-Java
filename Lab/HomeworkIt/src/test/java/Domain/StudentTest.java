@@ -18,25 +18,14 @@ class StudentTest {
     @Test
     void getID() {
         assertEquals(124, (int) student1.getID());
-        assertEquals(726, (int) student2.getID());
+        assertEquals(555, (int) student2.getID());
     }
 
     @Test
     void setID() {
         assertEquals(124, (int) student1.getID());
-        try {
-            student1.setID(123);
-            assertTrue(true);
-        } catch(IllegalArgumentException e) {
-            fail();
-        }
+        student1.setID(123);
         assertEquals(123, (int) student1.getID());
-        try {
-            student1.setID(null);
-            fail();
-        } catch(IllegalArgumentException e) {
-            assertTrue(true);
-        }
     }
 
     @Test
