@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.homework.gradle'
+group 'org.homework3.gradle'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
