@@ -1,21 +1,19 @@
 package com.company;
 
-package com.company;
-
-public class QuantityDiscount extends BaseDecorator {
-    public QuantityDiscount(Discount discount) {
+public class ExtraDiscount extends BaseDecorator {
+    public ExtraDiscount(Discount discount) {
         super(discount);
     }
 
     @Override
-    public int getPrice() {
-        int nowPrice = super.getPrice();
-        if(super. > 100) {
-            System.out.println("Price > 100, 10 dollars discount:");
-            System.out.println("Old price: " + nowPrice);
-            nowPrice -= 10;
-            System.out.println("New price: " + nowPrice);
+    public Product getDiscount() {
+        Product product = super.getDiscount();
+        if(product.getPrice() > 1000) {
+            System.out.println("100 dollars+, 100 dollars discount:");
+            System.out.println("Old price: " + product.getPrice());
+            product.setPrice(product.getPrice()-100);
+            System.out.println("New price: " + product.getPrice());
         }
-        return nowPrice;
+        return product;
     }
 }
