@@ -5,9 +5,15 @@ import HasID.HasID;
 public class Homework implements HasID<Integer> {
     private int number; //unique id
     private String description;
+    private int given; //week
     private int deadline; //week
-    private int finished; //week
-    private int mark;
+
+    public Homework(int number, String description, int given, int deadline) {
+        this.number = number;
+        this.description = description;
+        this.given = given;
+        this.deadline = deadline;
+    }
 
     @Override
     public Integer getID() {
@@ -16,8 +22,18 @@ public class Homework implements HasID<Integer> {
 
     @Override
     public void setID(Integer number) {
-        if(number == null)
-            throw new IllegalArgumentException("number cannot be null");
         this.number = number;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getGiven() {
+        return given;
+    }
+
+    public int getDeadline() {
+        return deadline;
     }
 }
