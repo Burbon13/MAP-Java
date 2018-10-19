@@ -1,6 +1,7 @@
 package HasID;
 
+
 public interface HasID<ID> {
     ID getID();
-    void setID(ID id);
+    void setID(ID id) throws IllegalArgumentException;
 }
