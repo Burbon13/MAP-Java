@@ -1,4 +1,4 @@
-package Validator;
+package validator;
 
 public class ValidationException extends Exception{
     private String message;

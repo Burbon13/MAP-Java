@@ -1,6 +1,6 @@
-package Validator;
+package validator;
 
-import Domain.Homework;
+import domain.Homework;
 
 public class HomeworkValidator implements Validator<Homework> {
     @Override

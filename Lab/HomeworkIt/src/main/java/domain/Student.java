@@ -1,6 +1,6 @@
-package Domain;
+package domain;
 
-import HasID.HasID;
+import hasID.HasID;
 
 public class Student implements HasID<Integer> {
     private int studentID; //Numarul matricol

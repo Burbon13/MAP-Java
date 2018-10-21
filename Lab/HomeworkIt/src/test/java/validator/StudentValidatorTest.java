@@ -1,6 +1,6 @@
-package Validator;
+package validator;
 
-import Domain.Student;
+import domain.Student;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

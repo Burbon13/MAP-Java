@@ -1,4 +1,4 @@
-package HasID;
+package hasID;
 
 
 public interface HasID<ID> {

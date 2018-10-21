@@ -1,17 +1,18 @@
-package Repository;
+package repository;
 
-import HasID.HasID;
-import Validator.ValidationException;
-import Validator.Validator;
+import hasID.HasID;
+import validator.ValidationException;
+import validator.Validator;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class AbstractCrudRepository<ID, E extends HasID<ID>> implements CrudRepository<ID, E> {
+public abstract class AbstractRepository<ID, E extends HasID<ID>> implements CrudRepository<ID, E> {
     private Map<ID,E> entities;
     private Validator<E> validator;
 
-    public AbstractCrudRepository(Validator<E> validator) {
+    public AbstractRepository(Validator<E> validator) {
         this.validator = validator;
         entities = new HashMap<>();
     }
@@ -24,7 +25,7 @@ public abstract class AbstractCrudRepository<ID, E extends HasID<ID>> implements
     }
 
     @Override
-    public Iterable<E> findAll() {
+    public Collection<E> findAll() {
         return entities.values();
     }
 
