@@ -25,6 +25,17 @@ public class Homework implements HasID<Integer> {
         this.number = number;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this)
+            return true;
+
+        if(!(obj instanceof Homework))
+            return false;
+
+        return this.number == ((Homework) obj).number;
+    }
+
     public String getDescription() {
         return description;
     }

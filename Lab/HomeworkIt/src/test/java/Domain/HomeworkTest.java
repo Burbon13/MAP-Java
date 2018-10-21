@@ -7,13 +7,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HomeworkTest {
-    Homework hm1, hm2, hm3;
+    private Homework hm1, hm2, hm3;
 
     @BeforeEach
     void setUp() {
         hm1 = new Homework(1,"Eazy", 11, 13);
         hm2 = new Homework(2,"Medium", 1, 14);
         hm3 = new Homework(3,"Hard tasks", 5, 6);
+    }
+
+    @Test
+    void equals() {
+        assertNotEquals(hm1,hm2);
+        assertNotEquals(hm1,null);
+        assertEquals(hm1,hm1);
+        assertEquals(hm1, new Homework(1,"Razy",0,1));
     }
 
     @Test

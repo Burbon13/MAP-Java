@@ -16,6 +16,14 @@ class StudentTest {
     }
 
     @Test
+    void equals() {
+        assertNotEquals(student1,student2);
+        assertNotEquals(student1,null);
+        assertEquals(student1,student1);
+        assertEquals(student1, new Student(124,"Razy",0,"",""));
+    }
+
+    @Test
     void getID() {
         assertEquals(124, (int) student1.getID());
         assertEquals(555, (int) student2.getID());

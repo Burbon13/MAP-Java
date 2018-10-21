@@ -27,6 +27,17 @@ public class Student implements HasID<Integer> {
         this.studentID = studentID;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj == this)
+            return true;
+
+        if(!(obj instanceof Student))
+            return false;
+
+        return this.studentID == ((Student) obj).studentID;
+    }
+
     public String getName() {
         return name;
     }

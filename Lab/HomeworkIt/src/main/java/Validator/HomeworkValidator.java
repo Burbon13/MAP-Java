@@ -19,7 +19,7 @@ public class HomeworkValidator implements Validator<Homework> {
             stringBuilder.append("given must be strictly smaller than deadline\n");
         if(homework.getDescription() == null)
             stringBuilder.append("description cannot be null\n");
-        if(homework.getDescription().equals(""))
+        else if(homework.getDescription().equals(""))
             stringBuilder.append("description cannot be empty\n");
         String problems = stringBuilder.toString();
         if(problems.length() > 0)

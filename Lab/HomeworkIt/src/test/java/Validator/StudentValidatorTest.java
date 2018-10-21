@@ -35,5 +35,24 @@ class StudentValidatorTest {
                     "name cannot be empty\n" +
                     "labTeacher cannot be empty\n", ve.toString());
         }
+
+        try {
+            validator.validate(null);
+            fail();
+        } catch (ValidationException ve) {
+            assertEquals("student cannot be null", ve.toString());
+        }
+
+        Student student4 = new Student(0,null,0,"",null);
+        try {
+            validator.validate(student4);
+            fail();
+        } catch (ValidationException ve) {
+            assertEquals("id cannot be 0\n" +
+                    "email cannot be empty\n" +
+                    "group cannot be 0\n" +
+                    "name cannot be null\n" +
+                    "labTeacher cannot be null\n", ve.toString());
+        }
     }
 }

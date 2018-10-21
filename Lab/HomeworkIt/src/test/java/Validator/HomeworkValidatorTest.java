@@ -26,14 +26,22 @@ class HomeworkValidatorTest {
                     "description cannot be empty\n");
         }
 
-        homework = new Homework(2,"fsd",20,0);
+        homework = new Homework(2,null,20,0);
         try {
             homeworkValidator.validate(homework);
             fail();
         }  catch(ValidationException ve) {
             assertEquals(ve.toString(),"given must be between 1 and 14\n" +
                     "deadline must be between 1 and 14\n" +
-                    "given must be strictly smaller than deadline\n");
+                    "given must be strictly smaller than deadline\n"+
+                    "description cannot be null\n");
+        }
+
+        try {
+            homeworkValidator.validate(null);
+            fail();
+        }  catch(ValidationException ve) {
+            assertEquals(ve.toString(),"homework cannot be null");
         }
     }
 }

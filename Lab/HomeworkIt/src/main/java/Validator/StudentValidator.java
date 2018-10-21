@@ -6,7 +6,7 @@ public class StudentValidator implements Validator<Student> {
     @Override
     public void validate(Student student) throws ValidationException {
         if(student == null)
-            throw new ValidationException("studentul nu poate sa fie null");
+            throw new ValidationException("student cannot be null");
 
         StringBuilder stringBuilder = new StringBuilder();
         if(student.getID() == 0)
