@@ -51,6 +51,8 @@ public class Service {
         Homework homework = homeworkRepository.findOne(number);
         if(homework == null)
             return false;
+        if(homework.getDeadline() >= newDeadline)
+            return false;
 
         LocalDate now = LocalDate.now();
         if((Period.between(startingDate,now).getDays()/7 + 1) <= homework.getDeadline() ) {

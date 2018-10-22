@@ -10,22 +10,30 @@ import validator.HomeworkValidator;
 import validator.StudentValidator;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ServiceTest {
+    private int day, month, year;
     private Service service;
 
     @BeforeEach
     void setUp() {
-        service = new Service(new HomeworkRepository(new HomeworkValidator()), new StudentRepository(new StudentValidator()),
-                LocalDate.of(2018,10,1));
+        service = new Service(new HomeworkRepository(new HomeworkValidator()), new StudentRepository(new StudentValidator()), LocalDate.now().minusWeeks(4));
         service.addStudent(123,"Razvan", 226, "rrir2390@yahoo.com", "Dorina");
         service.addStudent(125,"Razvan", 226, "fasf24390@yahoo.com", "Dorina");
         service.addStudent(128,"Razvan", 228, "sitt2331@yahoo.com", "Mihaela");
         service.addStudent(147,"Razvan", 228, "rrgf4390@yahoo.com", "Teodora");
         service.addStudent(188,"Razvan", 230, "rgfr2590@yahoo.com", "Dorina");
+
+        service.addHomework(1,"One problem", 1,2);
+        service.addHomework(2,"One problem", 1,4);
+        service.addHomework(5,"One problem", 3,4);
+        service.addHomework(3,"One problem", 2,5);
+        service.addHomework(8,"One problem", 4,5);
+        service.addHomework(4,"One problem", 6,10);
     }
 
     @Test
@@ -58,5 +66,15 @@ class ServiceTest {
     @Test
     void getAllStudents() {
         assertEquals(service.getAllStudents().size(),5);
+    }
+
+    @Test
+    void extendProblemDeadline() {
+        assertFalse(service.extendProblemDeadline(1,1));
+        assertFalse(service.extendProblemDeadline(233,4));
+        assertFalse(service.extendProblemDeadline(2,5));
+        assertTrue(service.extendProblemDeadline(3,6));
+        assertFalse(service.extendProblemDeadline(5,4));
+        assertTrue(service.extendProblemDeadline(8,10));
     }
 }
