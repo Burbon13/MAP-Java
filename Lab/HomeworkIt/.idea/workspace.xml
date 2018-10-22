@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="578a51ea-5d88-4772-aaf9-d35c137ebc9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AbstractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AbstractRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/validator/ValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/validator/ValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -28,9 +27,12 @@
     <SUITE FILE_PATH="coverage/HomeworkIt$StudentValidatorTest.ic" NAME="StudentValidatorTest Coverage Results" MODIFIED="1540154154116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Validator.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HomeworkIt$All_in_HomeworkIt_test.ic" NAME="All in HomeworkIt_test Coverage Results" MODIFIED="1540195639810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/HomeworkIt$All_in_HomeworkIt_test.ic" NAME="All in HomeworkIt_test Coverage Results" MODIFIED="1540217815420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/HomeworkIt$StudentTest.ic" NAME="StudentTest Coverage Results" MODIFIED="1540155240247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/HomeworkIt$ServiceTest.ic" NAME="ServiceTest Coverage Results" MODIFIED="1540217793430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>service.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageOptionsProvider">
@@ -76,24 +78,24 @@
         <counts>
           <entry key="AbstractCrudRepository" value="1" />
           <entry key="JAVA/" value="1" />
-          <entry key="java" value="49" />
+          <entry key="java" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="49" />
+          <entry key="JAVA" value="58" />
           <entry key="UML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="java" value="3927" />
+          <entry key="java" value="6423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3927" />
+          <entry key="JAVA" value="6423" />
           <entry key="PLAIN_TEXT" value="18" />
         </counts>
       </usages-collector>
@@ -102,63 +104,32 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Homework.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="333">
+              <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
               <folding>
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#936#937#0" expanded="true" />
+                <element signature="e#984#985#0" expanded="true" />
+                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+                <element signature="e#1188#1189#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/validator/ValidationException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
+            <state relative-caret-position="438">
+              <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
               <folding>
-                <element signature="e#225#226#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#2421#2422#0" expanded="true" />
+                <element signature="e#2484#2485#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/validator/Validator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/CrudRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/validator/HomeworkValidatorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -166,20 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/repository/StudentRepositoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="87" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="89" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -513,6 +472,8 @@
         <option value="$PROJECT_DIR$/src/main/java/validator/ValidationException.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/AbstractRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/CrudRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/Service.java" />
+        <option value="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" />
       </list>
     </option>
   </component>
@@ -523,10 +484,27 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-2637" />
+    <option name="y" value="166" />
+    <option name="width" value="1920" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Java</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issuesJava</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -593,6 +571,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HomeworkIt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HomeworkIt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="validator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -630,6 +616,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HomeworkIt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HomeworkIt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="validator" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -644,7 +638,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540195635946" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540217814740" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -653,6 +647,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="service" />
       <recent name="Repository" />
       <recent name="Validator" />
       <recent name="Domain" />
@@ -696,16 +691,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeworkValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeworkIt_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="validator.*" />
+          <option name="PATTERN" value="service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="validator" />
-      <option name="MAIN_CLASS_NAME" value="validator.HomeworkValidatorTest" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.ServiceTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -739,19 +734,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.HomeworkValidatorTest" />
       <item itemvalue="JUnit.StudentTest" />
       <item itemvalue="JUnit.HomeworkTest" />
       <item itemvalue="JUnit.StudentRepositoryTest" />
       <item itemvalue="JUnit.All in HomeworkIt_test" />
+      <item itemvalue="JUnit.ServiceTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in HomeworkIt_test" />
+        <item itemvalue="JUnit.ServiceTest" />
         <item itemvalue="JUnit.StudentRepositoryTest" />
         <item itemvalue="JUnit.HomeworkTest" />
         <item itemvalue="JUnit.StudentTest" />
-        <item itemvalue="JUnit.HomeworkValidatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -772,45 +767,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StudentRepositoryTest - 2018.10.22 at 00h 16m 19s.xml">
-      <configuration name="StudentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 13h 02m 09s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentRepositoryTest - 2018.10.22 at 00h 17m 32s.xml">
-      <configuration name="StudentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 13h 02m 24s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentRepositoryTest - 2018.10.22 at 00h 17m 47s.xml">
-      <configuration name="StudentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 16h 29m 26s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentRepositoryTest - 2018.10.22 at 00h 19m 11s.xml">
-      <configuration name="StudentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 16h 30m 22s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentRepositoryTest - 2018.10.22 at 00h 22m 56s.xml">
-      <configuration name="StudentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 16h 31m 12s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentRepositoryTest - 2018.10.22 at 00h 24m 28s.xml">
-      <configuration name="StudentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 16h 53m 40s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentRepositoryTest - 2018.10.22 at 00h 31m 22s.xml">
-      <configuration name="StudentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 17h 00m 36s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentRepositoryTest - 2018.10.22 at 00h 32m 24s.xml">
-      <configuration name="StudentRepositoryTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 17h 05m 56s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_HomeworkIt_test - 2018.10.22 at 00h 38m 47s.xml">
-      <configuration name="All in HomeworkIt_test" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 17h 12m 19s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_HomeworkIt_test - 2018.10.22 at 00h 40m 58s.xml">
-      <configuration name="All in HomeworkIt_test" configurationId="JUnit" />
+    <history-entry file="ServiceTest - 2018.10.22 at 17h 15m 44s.xml">
+      <configuration name="ServiceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13154000" />
+    <option name="totallyTimeSpent" value="21582000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="166" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25053304" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25053304" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -819,7 +814,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18093175" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30769232" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -840,7 +835,7 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.19616205" />
+      <window_info active="true" anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.19616205" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -931,13 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/validator/StudentValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/validator/StudentValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -949,17 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Homework.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -988,58 +965,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/StudentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/repository/StudentRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/HomeworkRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Repository/HomeworkRepositoryTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Student.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/validator/Validator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/validator/HomeworkValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="56" />
+        <state relative-caret-position="391">
+          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1054,17 +984,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/CrudRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/validator/Validator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/StudentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/HomeworkRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/validator/HomeworkValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/repository/StudentRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Homework.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="75" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="75" />
+          <folding>
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/validator/StudentValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="89" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="77" column="50" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
+          <folding>
+            <element signature="e#2421#2422#0" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
