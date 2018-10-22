@@ -4,6 +4,8 @@ import domain.Student;
 import repository.HomeworkRepository;
 import repository.StudentRepository;
 
+import java.util.Collection;
+
 public class Service {
     private HomeworkRepository homeworkRepository;
     private StudentRepository studentRepository;
@@ -13,21 +15,23 @@ public class Service {
         this.studentRepository = studentRepository;
     }
 
-    private boolean addStudent(int studentID, String name, int group, String email, String labTeacher) {
+    public boolean addStudent(int studentID, String name, int group, String email, String labTeacher) {
         return studentRepository.save(new Student(studentID, name, group, email, labTeacher))  == null;
     }
 
-    private boolean updateStudent(int studentID, String name, int group, String email, String labTeacher) {
+    public boolean updateStudent(int studentID, String name, int group, String email, String labTeacher) {
         return studentRepository.update(new Student(studentID, name, group, email, labTeacher)) == null;
     }
 
-    private boolean deleteStudent(int studentID) {
+    public boolean deleteStudent(int studentID) {
         return studentRepository.delete(studentID) != null;
     }
 
-    private Student getStudent(int studentID ) {
+    public Student getStudent(int studentID ) {
         return studentRepository.findOne(studentID);
     }
 
-    
+    public Collection<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
 }
