@@ -1,6 +1,6 @@
 package validator;
 
-public class ValidationException extends Exception{
+public class ValidationException extends RuntimeException{
     private String message;
 
     ValidationException(String message) {

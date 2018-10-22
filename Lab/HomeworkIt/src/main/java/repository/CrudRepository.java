@@ -15,7 +15,7 @@ public interface CrudRepository<ID, E> {
      *         if there is no entity with the given id
      * @throws IllegalArgumentException if id is null
      */
-    E findOne(ID id) throws IllegalArgumentException;
+    E findOne(ID id);
 
 
     /**
@@ -31,7 +31,7 @@ public interface CrudRepository<ID, E> {
      * @throws ValidationException if the entity is not valid
      * @throws IllegalArgumentException if the given entity is null
      */
-    E save(E entity) throws ValidationException, IllegalArgumentException;
+    E save(E entity) throws ValidationException;
 
 
     /**
@@ -41,7 +41,7 @@ public interface CrudRepository<ID, E> {
      *         the given id
      * @throws IllegalArgumentException if the given id is null
      */
-    E delete(ID id) throws IllegalArgumentException;
+    E delete(ID id);
 
 
     /**
@@ -51,5 +51,5 @@ public interface CrudRepository<ID, E> {
      * @throws ValidationException if the entity is not valid
      * @throws IllegalArgumentException if the entity is null
      */
-    E update(E entity) throws ValidationException, IllegalArgumentException;
+    E update(E entity);
 }

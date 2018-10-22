@@ -18,7 +18,7 @@ public abstract class AbstractRepository<ID, E extends HasID<ID>> implements Cru
     }
 
     @Override
-    public E findOne(ID id) throws IllegalArgumentException {
+    public E findOne(ID id) {
         if(id == null)
             throw new IllegalArgumentException("id cannot be null");
         return entities.get(id);
@@ -30,7 +30,7 @@ public abstract class AbstractRepository<ID, E extends HasID<ID>> implements Cru
     }
 
     @Override
-    public E save(E entity) throws ValidationException, IllegalArgumentException {
+    public E save(E entity) throws ValidationException {
         if(entity == null)
             throw new IllegalArgumentException("entity cannot be null");
         validator.validate(entity); //Throws ValidationException
@@ -46,14 +46,14 @@ public abstract class AbstractRepository<ID, E extends HasID<ID>> implements Cru
     }
 
     @Override
-    public E delete(ID id) throws IllegalArgumentException {
+    public E delete(ID id) {
         if(id == null)
             throw new IllegalArgumentException("id cannot be null");
         return entities.remove(id);
     }
 
     @Override
-    public E update(E entity) throws ValidationException, IllegalArgumentException {
+    public E update(E entity) {
         if(entity == null)
             throw new IllegalArgumentException("entity cannot be null");
         validator.validate(entity);
