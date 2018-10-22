@@ -9,6 +9,9 @@ import repository.StudentRepository;
 import validator.HomeworkValidator;
 import validator.StudentValidator;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ServiceTest {
@@ -16,7 +19,8 @@ class ServiceTest {
 
     @BeforeEach
     void setUp() {
-        service = new Service(new HomeworkRepository(new HomeworkValidator()), new StudentRepository(new StudentValidator()));
+        service = new Service(new HomeworkRepository(new HomeworkValidator()), new StudentRepository(new StudentValidator()),
+                LocalDate.of(2018,10,1));
         service.addStudent(123,"Razvan", 226, "rrir2390@yahoo.com", "Dorina");
         service.addStudent(125,"Razvan", 226, "fasf24390@yahoo.com", "Dorina");
         service.addStudent(128,"Razvan", 228, "sitt2331@yahoo.com", "Mihaela");
