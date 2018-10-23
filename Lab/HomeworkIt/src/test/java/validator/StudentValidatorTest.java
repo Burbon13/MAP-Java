@@ -22,7 +22,7 @@ class StudentValidatorTest {
             validator.validate(student2);
             fail();
         } catch (ValidationException ve) {
-            assertEquals("email cannot be null\nname cannot be empty\n", ve.toString());
+            assertEquals("email cannot be null\nname cannot be empty\n", ve.getMessage());
         }
 
         Student student3 = new Student(0,"",336,null,"");
@@ -33,14 +33,14 @@ class StudentValidatorTest {
             assertEquals("id cannot be 0\n" +
                     "email cannot be null\n" +
                     "name cannot be empty\n" +
-                    "labTeacher cannot be empty\n", ve.toString());
+                    "labTeacher cannot be empty\n", ve.getMessage());
         }
 
         try {
             validator.validate(null);
             fail();
         } catch (ValidationException ve) {
-            assertEquals("student cannot be null", ve.toString());
+            assertEquals("student cannot be null", ve.getMessage());
         }
 
         Student student4 = new Student(0,null,0,"",null);
@@ -52,7 +52,7 @@ class StudentValidatorTest {
                     "email cannot be empty\n" +
                     "group cannot be 0\n" +
                     "name cannot be null\n" +
-                    "labTeacher cannot be null\n", ve.toString());
+                    "labTeacher cannot be null\n", ve.getMessage());
         }
     }
 }

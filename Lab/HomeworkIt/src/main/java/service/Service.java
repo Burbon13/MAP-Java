@@ -22,16 +22,19 @@ public class Service {
         this.startingDate = startingDate;
     }
 
-    public boolean addStudent(int studentID, String name, int group, String email, String labTeacher) {
-        return studentRepository.save(new Student(studentID, name, group, email, labTeacher))  == null;
+    public void addStudent(int studentID, String name, int group, String email, String labTeacher) {
+        if(studentRepository.save(new Student(studentID, name, group, email, labTeacher))  != null)
+            throw new ServiceException("Student already exists!");
     }
 
-    public boolean updateStudent(int studentID, String name, int group, String email, String labTeacher) {
-        return studentRepository.update(new Student(studentID, name, group, email, labTeacher)) == null;
+    public void updateStudent(int studentID, String name, int group, String email, String labTeacher) {
+        if(studentRepository.update(new Student(studentID, name, group, email, labTeacher)) != null)
+            throw new ServiceException("Student doesn't exist!");
     }
 
-    public boolean deleteStudent(int studentID) {
-        return studentRepository.delete(studentID) != null;
+    public void deleteStudent(int studentID) {
+        if(studentRepository.delete(studentID) == null)
+            throw new ServiceException("Student doesn't exist!");
     }
 
     public Student getStudent(int studentID ) {
@@ -42,23 +45,24 @@ public class Service {
         return studentRepository.findAll();
     }
 
-    public boolean addHomework(int number, String description, int given, int deadline) {
-        return homeworkRepository.save(new Homework(number, description, given, deadline)) == null;
+    public void addHomework(int number, String description, int given, int deadline) {
+        if(homeworkRepository.save(new Homework(number, description, given, deadline)) != null)
+            throw new ServiceException("Homework already exists!");
     }
 
-    public boolean extendProblemDeadline(int number, int newDeadline) {
+    public void extendProblemDeadline(int number, int newDeadline) {
         //TODO: Service exception
         Homework homework = homeworkRepository.findOne(number);
         if(homework == null)
-            return false;
+            throw new ServiceException("Homework cannot be null!");
         if(homework.getDeadline() >= newDeadline)
-            return false;
+            throw new ServiceException("New deadline must be bigger than the actual deadline!");
 
         LocalDate now = LocalDate.now();
         if((Period.between(startingDate,now).getDays()/7 + 1) <= homework.getDeadline() ) {
             homeworkRepository.update(new Homework(number, homework.getDescription(), homework.getGiven(), newDeadline));
-            return true;
+            return;
         }
-        return false;
+        throw new ServiceException("Too late, you cannot extend the deadline anymore!");
     }
 }

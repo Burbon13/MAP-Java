@@ -37,24 +37,46 @@ class ServiceTest {
     }
 
     @Test
+    void addHomework() {
+        try {
+            service.addHomework(1,"dada",3,6);
+        } catch(ServiceException ex) {
+            assertEquals(ex.getMessage(), "Homework already exists!");
+        }
+    }
+
+    @Test
     void addStudent() {
         assertNull(service.getStudent(1251));
-        assertFalse(service.addStudent(123, "Razvan", 226, "rrir2390@yahoo.com", "Dorina"));
-        assertTrue(service.addStudent(1251, "Razvan", 226, "rrir2390@yahoo.com", "Dorina"));
+        try {
+            service.addStudent(123, "Razvan", 226, "rrir2390@yahoo.com", "Dorina");
+            fail();
+        } catch (ServiceException ex) {
+            assertEquals("Student already exists!", ex.getMessage());
+        }
+        service.addStudent(1251, "Razvan", 226, "rrir2390@yahoo.com", "Dorina");
         assertEquals(service.getAllStudents().size(),6);
         assertEquals(service.getStudent(1251), new Student(1251,"",0,"",""));
     }
 
     @Test
     void updateStudent() {
-        assertFalse(service.updateStudent(1,"fas",432,"fsa","fasf"));
-        assertTrue(service.updateStudent(123,"fsfsd",1,"fsf","fsfs"));
+        try {
+            service.updateStudent(1,"fas",432,"fsa","fasf");
+        } catch (ServiceException ex) {
+            assertEquals(ex.getMessage(), "Student doesn't exist!");
+        }
+        service.updateStudent(123,"fsfsd",1,"fsf","fsfs");
     }
 
     @Test
     void deleteStudent() {
-        assertFalse(service.deleteStudent(0));
-        assertTrue(service.deleteStudent(123));
+        try {
+            service.deleteStudent(0);
+        } catch (ServiceException ex) {
+            assertEquals(ex.getMessage(), "Student doesn't exist!");
+        }
+        service.deleteStudent(123);
     }
 
     @Test
@@ -70,11 +92,33 @@ class ServiceTest {
 
     @Test
     void extendProblemDeadline() {
-        assertFalse(service.extendProblemDeadline(1,1));
-        assertFalse(service.extendProblemDeadline(233,4));
-        assertFalse(service.extendProblemDeadline(2,5));
-        assertTrue(service.extendProblemDeadline(3,6));
-        assertFalse(service.extendProblemDeadline(5,4));
-        assertTrue(service.extendProblemDeadline(8,10));
+        try {
+            service.extendProblemDeadline(1,1);
+        } catch (ServiceException ex) {
+            assertEquals(ex.getMessage(), "New deadline must be bigger than the actual deadline!");
+        }
+
+        try {
+            service.extendProblemDeadline(233,4);
+        } catch(ServiceException ex) {
+            assertEquals(ex.getMessage(), "Homework cannot be null!");
+        }
+
+        try {
+            service.extendProblemDeadline(2,13);
+        } catch(ServiceException ex) {
+            assertEquals(ex.getMessage(), "Too late, you cannot extend the deadline anymore!");
+        }
+
+
+        service.extendProblemDeadline(3,6);
+
+        try {
+            service.extendProblemDeadline(5,4);
+        } catch(ServiceException ex) {
+            assertEquals(ex.getMessage(), "New deadline must be bigger than the actual deadline!");
+        }
+
+        service.extendProblemDeadline(8,10);
     }
 }

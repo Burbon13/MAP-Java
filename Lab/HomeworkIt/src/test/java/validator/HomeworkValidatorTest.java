@@ -22,7 +22,7 @@ class HomeworkValidatorTest {
             homeworkValidator.validate(homework);
             fail();
         }  catch(ValidationException ve) {
-            assertEquals(ve.toString(),"id cannot be null\n" +
+            assertEquals(ve.getMessage(),"id cannot be null\n" +
                     "description cannot be empty\n");
         }
 
@@ -31,7 +31,7 @@ class HomeworkValidatorTest {
             homeworkValidator.validate(homework);
             fail();
         }  catch(ValidationException ve) {
-            assertEquals(ve.toString(),"given must be between 1 and 14\n" +
+            assertEquals(ve.getMessage(),"given must be between 1 and 14\n" +
                     "deadline must be between 1 and 14\n" +
                     "given must be strictly smaller than deadline\n"+
                     "description cannot be null\n");
@@ -41,7 +41,7 @@ class HomeworkValidatorTest {
             homeworkValidator.validate(null);
             fail();
         }  catch(ValidationException ve) {
-            assertEquals(ve.toString(),"homework cannot be null");
+            assertEquals(ve.getMessage(),"homework cannot be null");
         }
     }
 }
