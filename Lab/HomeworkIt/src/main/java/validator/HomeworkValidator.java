@@ -1,8 +1,15 @@
 package validator;
 
 import domain.Homework;
+import validator.exception.ValidationException;
 
 public class HomeworkValidator implements Validator<Homework> {
+
+    /**
+     * Validator method that checks if a homework has any problems
+     * @param homework what needs to be validated
+     * @throws ValidationException if the homework is not correct
+     */
     @Override
     public void validate(Homework homework) throws ValidationException {
         if(homework == null)

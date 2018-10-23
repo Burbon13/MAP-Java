@@ -1,17 +1,15 @@
 package service;
 
 import domain.Student;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import repository.HomeworkRepository;
 import repository.StudentRepository;
+import service.exception.ServiceException;
 import validator.HomeworkValidator;
 import validator.StudentValidator;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 

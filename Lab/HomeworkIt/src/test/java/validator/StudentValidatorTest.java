@@ -2,6 +2,7 @@ package validator;
 
 import domain.Student;
 import org.junit.jupiter.api.Test;
+import validator.exception.ValidationException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

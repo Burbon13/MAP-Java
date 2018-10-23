@@ -1,8 +1,15 @@
 package validator;
 
 import domain.Student;
+import validator.exception.ValidationException;
 
 public class StudentValidator implements Validator<Student> {
+
+    /**
+     * Validator method that checks if a STUDENT has any problems
+     * @param student which needs to be validated
+     * @throws ValidationException if the student is not correct
+     */
     @Override
     public void validate(Student student) throws ValidationException {
         if(student == null)
