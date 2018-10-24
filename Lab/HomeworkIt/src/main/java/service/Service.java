@@ -2,8 +2,8 @@ package service;
 
 import domain.Homework;
 import domain.Student;
-import repository.HomeworkRepository;
-import repository.StudentRepository;
+import repository.in_memory.HomeworkRepository;
+import repository.in_memory.StudentRepository;
 import service.exception.ServiceException;
 
 import java.time.LocalDate;

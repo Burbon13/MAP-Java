@@ -2,10 +2,12 @@ package domain;
 
 import hasID.HasID;
 
+import java.io.Serializable;
+
 /**
  * Domain class for student
  */
-public class Student implements HasID<Integer> {
+public class Student implements HasID<Integer>, Serializable {
     private int studentID; //Numarul matricol
     private String name;
     private int group;

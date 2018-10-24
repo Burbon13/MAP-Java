@@ -2,10 +2,12 @@ package domain;
 
 import hasID.HasID;
 
+import java.io.Serializable;
+
 /**
  * Domain class for homework
  */
-public class Homework implements HasID<Integer> {
+public class Homework implements HasID<Integer>, Serializable {
     private int number; //unique id
     private String description;
     private int given; //week

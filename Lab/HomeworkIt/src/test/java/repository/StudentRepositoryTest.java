@@ -1,6 +1,7 @@
 package repository;
 
 import domain.Student;
+import repository.in_memory.StudentRepository;
 import validator.StudentValidator;
 import validator.exception.ValidationException;
 import org.junit.jupiter.api.AfterEach;
