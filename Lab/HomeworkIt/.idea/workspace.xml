@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="578a51ea-5d88-4772-aaf9-d35c137ebc9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/exception/FileRepositoryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/in_file/HomeworkFileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/in_file/StudentFileRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/exception/FileRepositoryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/in_file/HomeworkFileRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/in_file/StudentFileRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/v1/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/v1/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/v1/repository/HomeworkRepository.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/v1/repository/HomeworkRepository.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/v1/repository/StudentRepository.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/v1/repository/StudentRepository.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/v1/service/Service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/v1/service/Service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Homework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Homework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/HomeworkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/in_memory/HomeworkRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/in_memory/StudentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/repository/StudentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/StudentRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/temp_st_text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/temp_st_text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/repository/exception/FileRepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/exception/FileRepositoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/repository/in_file/StudentFileRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/repository/in_file/StudentFileRepositoryTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -44,7 +29,7 @@
     <SUITE FILE_PATH="coverage/HomeworkIt$StudentRepositoryTest.ic" NAME="StudentRepositoryTest Coverage Results" MODIFIED="1540157541839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Repository.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HomeworkIt$StudentFileRepositoryTest.ic" NAME="StudentFileRepositoryTest Coverage Results" MODIFIED="1540415839616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/HomeworkIt$StudentFileRepositoryTest.ic" NAME="StudentFileRepositoryTest Coverage Results" MODIFIED="1540416586375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>repository.in_file.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/HomeworkIt$ServiceTest_extendProblemDeadline.ic" NAME="ServiceTest.extendProblemDeadline Coverage Results" MODIFIED="1540321149143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -53,19 +38,22 @@
     <SUITE FILE_PATH="coverage/HomeworkIt$StudentValidatorTest.ic" NAME="StudentValidatorTest Coverage Results" MODIFIED="1540154154116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Validator.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/HomeworkIt$All_in_HomeworkIt_test.ic" NAME="All in HomeworkIt_test Coverage Results" MODIFIED="1540415942187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/HomeworkIt$All_in_HomeworkIt_test.ic" NAME="All in HomeworkIt_test Coverage Results" MODIFIED="1540416641049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/HomeworkIt$StudentTest.ic" NAME="StudentTest Coverage Results" MODIFIED="1540155240247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Domain.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/HomeworkIt$ServiceTest.ic" NAME="ServiceTest Coverage Results" MODIFIED="1540321384392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>service.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/HomeworkIt$StudentFileRepositoryTest_repoExp.ic" NAME="StudentFileRepositoryTest.repoExp Coverage Results" MODIFIED="1540416561254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>repository.in_file.*</FILTER>
+    </SUITE>
   </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="1" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="34" />
+    <option name="myElementSize" value="17" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -93,10 +81,10 @@
     <session id="774505670">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="2" />
@@ -104,7 +92,7 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -112,14 +100,14 @@
           <entry key="AbstractCrudRepository" value="1" />
           <entry key="JAVA/" value="1" />
           <entry key="class" value="4" />
-          <entry key="java" value="134" />
+          <entry key="java" value="145" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
-          <entry key="JAVA" value="134" />
+          <entry key="JAVA" value="145" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="UML" value="2" />
         </counts>
@@ -127,13 +115,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="35" />
-          <entry key="java" value="15011" />
+          <entry key="java" value="15122" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15011" />
+          <entry key="JAVA" value="15122" />
           <entry key="PLAIN_TEXT" value="36" />
         </counts>
       </usages-collector>
@@ -142,50 +130,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/repository/in_file/HomeworkFileRepositoryTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#1533#1534#0" expanded="true" />
-                <element signature="e#1587#1588#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_file/HomeworkFileRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-              <folding>
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_file/StudentFileRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+            <state relative-caret-position="1200">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_memory/HomeworkRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -193,35 +144,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/repository/in_file/StudentFileRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="59" column="54" lean-forward="true" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
-              <folding>
-                <element signature="e#418#462#1" expanded="true" />
-                <element signature="e#1547#1548#0" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1057#1087#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/repository/exception/FileRepositoryException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="694">
+              <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -579,11 +503,12 @@
         <option value="$PROJECT_DIR$/data/temp_hm_text.txt" />
         <option value="$PROJECT_DIR$/src/main/java/repository/in_file/RepoDTO.java" />
         <option value="$PROJECT_DIR$/src/test/java/repository/FileRepositoryException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/repository/in_file/HomeworkFileRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/in_file/HomeworkFileRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/in_file/StudentFileRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/repository/in_file/StudentFileRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/repository/exception/FileRepositoryException.java" />
       </list>
     </option>
   </component>
@@ -624,7 +549,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -771,6 +695,15 @@
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HomeworkIt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HomeworkIt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
               <item name="in_file" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -794,6 +727,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -802,7 +736,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540415960218" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540416640522" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -872,22 +806,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceTest.extendProblemDeadline" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HomeworkIt_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.exception.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.ServiceTest" />
-      <option name="METHOD_NAME" value="extendProblemDeadline" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StudentFileRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HomeworkIt_test" />
       <extension name="coverage">
@@ -902,20 +820,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StudentFileRepositoryTest.repoExp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HomeworkIt_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="repository.in_file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="repository.in_file" />
+      <option name="MAIN_CLASS_NAME" value="repository.in_file.StudentFileRepositoryTest" />
+      <option name="METHOD_NAME" value="repoExp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.All in HomeworkIt_test" />
       <item itemvalue="JUnit.ServiceTest" />
-      <item itemvalue="JUnit.ServiceTest.extendProblemDeadline" />
       <item itemvalue="JUnit.HomeworkFileRepositoryTest" />
       <item itemvalue="JUnit.StudentFileRepositoryTest" />
+      <item itemvalue="JUnit.StudentFileRepositoryTest.repoExp" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in HomeworkIt_test" />
         <item itemvalue="JUnit.StudentFileRepositoryTest" />
+        <item itemvalue="JUnit.StudentFileRepositoryTest.repoExp" />
         <item itemvalue="JUnit.HomeworkFileRepositoryTest" />
         <item itemvalue="JUnit.ServiceTest" />
-        <item itemvalue="JUnit.ServiceTest.extendProblemDeadline" />
       </list>
     </recent_temporary>
   </component>
@@ -940,29 +874,12 @@
       <workItem from="1540411094119" duration="317000" />
       <workItem from="1540411450082" duration="55000" />
       <workItem from="1540411528005" duration="42000" />
-      <workItem from="1540411694568" duration="4127000" />
+      <workItem from="1540411694568" duration="4949000" />
+      <workItem from="1540471564159" duration="100000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HomeworkFileRepositoryTest - 2018.10.24 at 23h 32m 57s.xml">
-      <configuration name="HomeworkFileRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HomeworkFileRepositoryTest - 2018.10.24 at 23h 40m 29s.xml">
-      <configuration name="HomeworkFileRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HomeworkFileRepositoryTest - 2018.10.24 at 23h 41m 06s.xml">
-      <configuration name="HomeworkFileRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HomeworkFileRepositoryTest - 2018.10.24 at 23h 53m 55s.xml">
-      <configuration name="HomeworkFileRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HomeworkFileRepositoryTest - 2018.10.24 at 23h 56m 23s.xml">
-      <configuration name="HomeworkFileRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HomeworkFileRepositoryTest - 2018.10.24 at 23h 59m 12s.xml">
-      <configuration name="HomeworkFileRepositoryTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HomeworkFileRepositoryTest - 2018.10.24 at 23h 59m 30s.xml">
       <configuration name="HomeworkFileRepositoryTest" configurationId="JUnit" />
     </history-entry>
@@ -975,15 +892,32 @@
     <history-entry file="StudentFileRepositoryTest - 2018.10.25 at 00h 17m 23s.xml">
       <configuration name="StudentFileRepositoryTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_HomeworkIt_test - 2018.10.25 at 00h 17m 32s.xml">
+      <configuration name="All in HomeworkIt_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_HomeworkIt_test - 2018.10.25 at 00h 19m 06s.xml">
+      <configuration name="All in HomeworkIt_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StudentFileRepositoryTest_repoExp - 2018.10.25 at 00h 27m 37s.xml">
+      <configuration name="StudentFileRepositoryTest.repoExp" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StudentFileRepositoryTest_repoExp - 2018.10.25 at 00h 29m 24s.xml">
+      <configuration name="StudentFileRepositoryTest.repoExp" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StudentFileRepositoryTest - 2018.10.25 at 00h 29m 48s.xml">
+      <configuration name="StudentFileRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_HomeworkIt_test - 2018.10.25 at 00h 30m 44s.xml">
+      <configuration name="All in HomeworkIt_test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47712000" />
+    <option name="totallyTimeSpent" value="48634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23801917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -992,7 +926,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25894737" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1206,13 +1140,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/exception/FileRepositoryException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/temp_hm_text.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1225,13 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="174" selection-start-line="174" selection-end-line="174" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/repository/exception/FileRepositoryException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -1249,13 +1169,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_file/HomeworkFileRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="72">
+          <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1057#1087#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1271,45 +1191,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_file/HomeworkFileRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_memory/HomeworkRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        <state relative-caret-position="144">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/exception/FileRepositoryException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_file/StudentFileRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_memory/HomeworkRepository.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/jdk/internal/reflect/DelegatingMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/repository/exception/FileRepositoryException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/repository/in_file/StudentFileRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="59" column="54" lean-forward="true" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
-          <folding>
-            <element signature="e#418#462#1" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="694">
+          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
         </state>
       </provider>
     </entry>

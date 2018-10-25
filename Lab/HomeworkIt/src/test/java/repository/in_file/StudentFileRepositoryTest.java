@@ -5,6 +5,7 @@ import domain.Student;
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import repository.exception.FileRepositoryException;
 import validator.HomeworkValidator;
 import validator.StudentValidator;
 
@@ -74,5 +75,14 @@ class StudentFileRepositoryTest {
         StudentFileRepository aux = new StudentFileRepository(new StudentValidator(), "temp_st_text.txt");
         assertEquals(aux.findAll().size(), 4);
         assertEquals(aux.findOne(1).getGroup(), 334);
+    }
+
+    @Test
+    void repoExp() {
+        try {
+            StudentFileRepository sfr = new StudentFileRepository(new StudentValidator(), "ha");
+        } catch (FileRepositoryException ex) {
+            assertTrue(true);
+        }
     }
 }
