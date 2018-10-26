@@ -93,4 +93,9 @@ public class Student implements HasID<Integer> {
     public String getLabTeacher() {
         return labTeacher;
     }
+
+    @Override
+    public String toString() {
+        return studentID + " " + name + " " + group + " " + email + " " + labTeacher;
+    }
 }
