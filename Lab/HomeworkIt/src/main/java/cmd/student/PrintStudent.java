@@ -20,8 +20,8 @@ public class PrintStudent extends AbstractCommand {
         }
     }
 
-    @Override
-    public void undo() {
-        System.out.println("Cannot undo print command!");
-    }
+//    @Override
+//    public void undo() {
+//        System.out.println("Cannot undo print command!");
+//    }
 }

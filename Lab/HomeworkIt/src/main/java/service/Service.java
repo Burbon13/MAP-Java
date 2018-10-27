@@ -100,6 +100,16 @@ public class Service {
     }
 
     /**
+     * Deletes homework from repository
+     * @param number the homework's id
+     * @throws ServiceException if the homework doesn't exist in the repo
+     */
+    public void deleteHomework(int number) {
+        if(homeworkRepository.delete(number) == null)
+            throw new ServiceException(String.format("Homework with id %d doesn't exist!", number));
+    }
+
+    /**
      * Extends the deadline of a given problem
      * @param number the problem's unique id
      * @param newDeadline the new deadline to be set

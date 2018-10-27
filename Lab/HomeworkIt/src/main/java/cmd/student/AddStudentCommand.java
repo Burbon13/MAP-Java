@@ -21,17 +21,18 @@ public class AddStudentCommand extends AbstractCommand {
     public void execute() {
         try {
             service.addStudent(studentID, name, group, email, labTeacher);
+            System.out.println("Student added!");
         } catch (ServiceException ex) {
             System.out.println(ex.getMessage());
         }
     }
 
-    @Override
-    public void undo() {
-        try {
-            service.deleteStudent(studentID);
-        } catch (ServiceException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
+//    @Override
+//    public void undo() {
+//        try {
+//            service.deleteStudent(studentID);
+//        } catch (ServiceException ex) {
+//            System.out.println(ex.getMessage());
+//        }
+//    }
 }
