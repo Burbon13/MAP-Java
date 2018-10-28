@@ -1,16 +1,15 @@
 package cmd.student;
 
-import cmd.AbstractCommand;
+import cmd.AbstractServiceCommand;
 import cmd.CommandException;
-import domain.Student;
 import service.Service;
 import service.exception.ServiceException;
 
-public class DeleteStudentCommand extends AbstractCommand {
+public class DeleteStudentServiceCommand extends AbstractServiceCommand {
     private int studentID;
 //    private Student studentDeleted;
 
-    public DeleteStudentCommand(Service service, String[] sep_params) {
+    public DeleteStudentServiceCommand(Service service, String[] sep_params) {
         super(service);
         if(sep_params.length != 2)
             throw new CommandException("Invalid parameters!");

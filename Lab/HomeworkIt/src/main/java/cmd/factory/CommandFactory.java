@@ -2,8 +2,10 @@ package cmd.factory;
 
 import cmd.Command;
 import cmd.CommandException;
-import cmd.homework.AddHomeworkCommand;
-import cmd.homework.ExtendDeadlineCommand;
+import cmd.homework.AddHomeworkServiceCommand;
+import cmd.homework.DeleteHomeworkCommand;
+import cmd.homework.ExtendDeadlineServiceCommand;
+import cmd.homework.PrintAllHomeworkCommand;
 import cmd.student.*;
 import service.Service;
 
@@ -17,13 +19,15 @@ public class CommandFactory {
 
     static {
         commandMap = new HashMap<>();
-        commandMap.put("add_stud", AddStudentCommand.class);
-        commandMap.put("del_stud", DeleteStudentCommand.class);
-        commandMap.put("update_stud", UpdateStudentCommand.class);
-        commandMap.put("get_stud", PrintStudent.class);
-        commandMap.put("add_prob", AddHomeworkCommand.class);
-        commandMap.put("extend_deadline", ExtendDeadlineCommand.class);
-        commandMap.put("print_students", PrintAllStudents.class);
+        commandMap.put("add_stud", AddStudentServiceCommand.class);
+        commandMap.put("del_stud", DeleteStudentServiceCommand.class);
+        commandMap.put("update_stud", UpdateStudentServiceCommand.class);
+        commandMap.put("get_stud", PrintStudentCommand.class);
+        commandMap.put("add_prob", AddHomeworkServiceCommand.class);
+        commandMap.put("extend_deadline", ExtendDeadlineServiceCommand.class);
+        commandMap.put("print_students", PrintAllStudentsCommand.class);
+        commandMap.put("print_homework", PrintAllHomeworkCommand.class);
+        commandMap.put("del_homework", DeleteHomeworkCommand.class);
     }
 
     private CommandFactory() {}

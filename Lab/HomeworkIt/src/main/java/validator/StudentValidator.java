@@ -16,14 +16,14 @@ public class StudentValidator implements Validator<Student> {
             throw new ValidationException("student cannot be null");
 
         StringBuilder stringBuilder = new StringBuilder();
-        if(student.getID() == 0)
-            stringBuilder.append("id cannot be 0\n");
+        if(student.getID() <= 0)
+            stringBuilder.append("id must be greater than 0\n");
         if(student.getEmail() == null)
             stringBuilder.append("email cannot be null\n");
         else if(student.getEmail().equals(""))
             stringBuilder.append("email cannot be empty\n");
-        if(student.getGroup() == 0)
-            stringBuilder.append("group cannot be 0\n");
+        if(student.getGroup() <= 0)
+            stringBuilder.append("group must be greater than 0\n");
         if(student.getName() == null)
             stringBuilder.append("name cannot be null\n");
         else if(student.getName().equals(""))

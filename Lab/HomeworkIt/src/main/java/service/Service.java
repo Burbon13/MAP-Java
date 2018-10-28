@@ -2,6 +2,8 @@ package service;
 
 import domain.Homework;
 import domain.Student;
+import repository.AbstractRepository;
+import repository.CrudRepository;
 import repository.in_memory.HomeworkRepository;
 import repository.in_memory.StudentRepository;
 import service.exception.ServiceException;
@@ -16,8 +18,8 @@ import java.util.Collection;
  * and 'update deadline' functionality for the saved homework
  */
 public class Service {
-    private HomeworkRepository homeworkRepository;
-    private StudentRepository studentRepository;
+    private CrudRepository<Integer, Homework> homeworkRepository;
+    private CrudRepository<Integer, Student> studentRepository;
     private LocalDate startingDate;
 
     /**
@@ -26,7 +28,7 @@ public class Service {
      * @param studentRepository repository responsible for managing the students
      * @param startingDate the starting date of the semester
      */
-    public Service(HomeworkRepository homeworkRepository, StudentRepository studentRepository, LocalDate startingDate) {
+    public Service(CrudRepository<Integer, Homework> homeworkRepository, CrudRepository<Integer, Student> studentRepository, LocalDate startingDate) {
         this.homeworkRepository = homeworkRepository;
         this.studentRepository = studentRepository;
         this.startingDate = startingDate;
@@ -84,7 +86,7 @@ public class Service {
      * @return all the students
      */
     public Collection<Student> getAllStudents() {
-        return studentRepository.findAll();
+        return  (Collection<Student>)studentRepository.findAll();
     }
 
     /**
@@ -114,7 +116,7 @@ public class Service {
      * @return the homework
      */
     public Collection<Homework> getAllHomework() {
-        return homeworkRepository.findAll();
+        return (Collection<Homework>)homeworkRepository.findAll();
     }
 
     /**

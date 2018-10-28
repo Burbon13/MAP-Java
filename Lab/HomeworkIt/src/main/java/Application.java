@@ -1,16 +1,15 @@
 import cmd.factory.CommandFactory;
 import cmd.factory.CommandFactoryException;
-import cmd.student.AddStudentCommand;
-import domain.Student;
-import repository.HomeworkRepository;
-import repository.StudentRepository;
+import repository.exception.FileRepositoryException;
+import repository.in_file.HomeworkFileRepository;
+import repository.in_file.StudentFileRepository;
+import repository.in_memory.HomeworkRepository;
+import repository.in_memory.StudentRepository;
 import service.Service;
 import validator.HomeworkValidator;
 import validator.StudentValidator;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.time.LocalDate;
 
 public class Application {
@@ -18,13 +17,18 @@ public class Application {
     private static Service service;
 
     static {
-        HomeworkRepository homeworkRepository = new HomeworkRepository(new HomeworkValidator());
-        StudentRepository studentRepository  = new StudentRepository(new StudentValidator());
-        LocalDate semesterStart = LocalDate.of(2018, 10, 1);
-        service = new Service(homeworkRepository, studentRepository, semesterStart);
-        reader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            HomeworkFileRepository homeworkRepository = new HomeworkFileRepository(new HomeworkValidator(), "homework.txt");
+            StudentFileRepository studentRepository = new StudentFileRepository(new StudentValidator(), "students.txt");
+            LocalDate semesterStart = LocalDate.of(2018, 10, 1);
+            service = new Service(homeworkRepository, studentRepository, semesterStart);
+            reader = new BufferedReader(new InputStreamReader(System.in));
+        }catch (FileRepositoryException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 
+    @SuppressWarnings("InfiniteLoopStatement")
     public static void main(String[] args) {
         while(true) {
             try {

@@ -1,14 +1,15 @@
 package cmd.homework;
 
-import cmd.AbstractCommand;
+import cmd.AbstractServiceCommand;
 import cmd.CommandException;
 import service.Service;
 import service.exception.ServiceException;
+import validator.exception.ValidationException;
 
-public class ExtendDeadlineCommand extends AbstractCommand {
+public class ExtendDeadlineServiceCommand extends AbstractServiceCommand {
     private int number /*, oldDeadline*/, newDeadline;
 
-    public ExtendDeadlineCommand(Service service, String[] sep_params) {
+    public ExtendDeadlineServiceCommand(Service service, String[] sep_params) {
         super(service);
         if(sep_params.length != 3)
             throw new CommandException("Invalid parameters!");
@@ -29,7 +30,7 @@ public class ExtendDeadlineCommand extends AbstractCommand {
         try {
             service.extendProblemDeadline(number, newDeadline);
             System.out.println("Deadline extended!");
-        } catch (ServiceException ex) {
+        } catch (ServiceException | ValidationException ex) {
             System.out.println(ex.getMessage());
         }
     }

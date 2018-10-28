@@ -98,6 +98,6 @@ public class Student implements HasID<Integer>, Serializable {
 
     @Override
     public String toString() {
-        return studentID + " " + name + " " + group + " " + email + " " + labTeacher;
+        return "ID: " + studentID + " | Name: " + name + " | Group: " + group + " | Email: " + email + " | Teacher: " + labTeacher;
     }
 }

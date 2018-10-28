@@ -1,11 +1,11 @@
 package cmd.student;
 
-import cmd.AbstractCommand;
+import cmd.AbstractServiceCommand;
 import domain.Student;
 import service.Service;
 
-public class PrintAllStudents extends AbstractCommand {
-    public PrintAllStudents(Service service, String[] sep_params) {
+public class PrintAllStudentsCommand extends AbstractServiceCommand {
+    public PrintAllStudentsCommand(Service service, String[] sep_params) {
         super(service);
     }
 

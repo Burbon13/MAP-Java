@@ -1,16 +1,16 @@
 package cmd.homework;
 
-import cmd.AbstractCommand;
+import cmd.AbstractServiceCommand;
 import cmd.CommandException;
 import service.Service;
 import service.exception.ServiceException;
 import validator.exception.ValidationException;
 
-public class AddHomeworkCommand extends AbstractCommand {
+public class AddHomeworkServiceCommand extends AbstractServiceCommand {
     private int hmNumber, given, deadline;
     private String description;
 
-    public AddHomeworkCommand(Service service, String[] sep_params) {
+    public AddHomeworkServiceCommand(Service service, String[] sep_params) {
         super(service);
         if(sep_params.length != 5)
             throw new CommandException("Invalid parameters!");

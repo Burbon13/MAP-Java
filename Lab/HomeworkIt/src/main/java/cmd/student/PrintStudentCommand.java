@@ -1,13 +1,13 @@
 package cmd.student;
 
-import cmd.AbstractCommand;
+import cmd.AbstractServiceCommand;
 import cmd.CommandException;
 import service.Service;
 
-public class PrintStudent extends AbstractCommand {
+public class PrintStudentCommand extends AbstractServiceCommand {
     private int studentID;
 
-    public PrintStudent(Service service, String[] sep_params) {
+    public PrintStudentCommand(Service service, String[] sep_params) {
         super(service);
         if(sep_params.length != 2)
             throw new CommandException("Invalid parameters!");

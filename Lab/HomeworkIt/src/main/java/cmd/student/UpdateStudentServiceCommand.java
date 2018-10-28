@@ -1,18 +1,17 @@
 package cmd.student;
 
-import cmd.AbstractCommand;
+import cmd.AbstractServiceCommand;
 import cmd.CommandException;
-import domain.Student;
 import service.Service;
 import service.exception.ServiceException;
 import validator.exception.ValidationException;
 
-public class UpdateStudentCommand extends AbstractCommand {
+public class UpdateStudentServiceCommand extends AbstractServiceCommand {
     private int studentID, newGroup;
     private String newName, newLabTeacher, newEmail;
 //    private Student oldStudent;
 
-    public UpdateStudentCommand(Service service, String[] sep_params) {
+    public UpdateStudentServiceCommand(Service service, String[] sep_params) {
         super(service);
         if(sep_params.length != 6)
             throw new CommandException("Invalid parameters!");

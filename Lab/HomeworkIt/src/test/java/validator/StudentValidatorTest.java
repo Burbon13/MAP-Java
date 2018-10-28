@@ -31,7 +31,7 @@ class StudentValidatorTest {
             validator.validate(student3);
             fail();
         } catch (ValidationException ve) {
-            assertEquals("id cannot be 0\n" +
+            assertEquals("id must be greater than 0\n" +
                     "email cannot be null\n" +
                     "name cannot be empty\n" +
                     "labTeacher cannot be empty\n", ve.getMessage());
@@ -49,9 +49,9 @@ class StudentValidatorTest {
             validator.validate(student4);
             fail();
         } catch (ValidationException ve) {
-            assertEquals("id cannot be 0\n" +
+            assertEquals("id must be greater than 0\n" +
                     "email cannot be empty\n" +
-                    "group cannot be 0\n" +
+                    "group must be greater than 0\n" +
                     "name cannot be null\n" +
                     "labTeacher cannot be null\n", ve.getMessage());
         }
