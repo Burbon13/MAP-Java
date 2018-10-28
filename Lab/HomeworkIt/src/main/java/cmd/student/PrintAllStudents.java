@@ -9,6 +9,9 @@ public class PrintAllStudents extends AbstractCommand {
         super(service);
     }
 
+    /**
+     * Prints all students from memory
+     */
     @Override
     public void execute() {
         if(service.getAllStudents().size() == 0) {

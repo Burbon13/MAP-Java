@@ -21,6 +21,9 @@ public class ExtendDeadlineCommand extends AbstractCommand {
          }
     }
 
+    /**
+     * Extends deadline of homework from memory
+     */
     @Override
     public void execute() {
         try {

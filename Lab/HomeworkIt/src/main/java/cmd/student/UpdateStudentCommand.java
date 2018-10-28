@@ -28,6 +28,9 @@ public class UpdateStudentCommand extends AbstractCommand {
         this.newLabTeacher = sep_params[5];
     }
 
+    /**
+     * Updates the student from memory
+     */
     @Override
     public void execute() {
         try {

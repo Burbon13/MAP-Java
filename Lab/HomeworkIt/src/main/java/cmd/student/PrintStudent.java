@@ -18,6 +18,9 @@ public class PrintStudent extends AbstractCommand {
         }
     }
 
+    /**
+     * Prints the student from memory
+     */
     @Override
     public void execute() {
         try {

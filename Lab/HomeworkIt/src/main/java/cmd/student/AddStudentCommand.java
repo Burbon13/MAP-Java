@@ -26,6 +26,9 @@ public class AddStudentCommand extends AbstractCommand {
         this.labTeacher = sep_params[5];
     }
 
+    /**
+     * Adds student into memory
+     */
     @Override
     public void execute() {
         try {

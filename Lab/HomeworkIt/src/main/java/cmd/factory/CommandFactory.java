@@ -28,6 +28,13 @@ public class CommandFactory {
 
     private CommandFactory() {}
 
+    /**
+     * Returns the corresponding command class for the given string command
+     * @param command the string containing the user's command
+     * @param service instance for the business layer
+     * @return instance of class which implements Command interface
+     * @throws CommandFactoryException if the parameters are not valid
+     */
     public static Command getCommand(String command, Service service) {
         //TODO: Document yourself a little bit more about this :))
         String[] cmd = Arrays.stream(command.split(" (?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)")).filter(s -> s.length() > 0).toArray(String[]::new);

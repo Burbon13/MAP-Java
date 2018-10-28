@@ -21,6 +21,9 @@ public class DeleteStudentCommand extends AbstractCommand {
         }
     }
 
+    /**
+     * Deletes student from memory
+     */
     @Override
     public void execute() {
         try {

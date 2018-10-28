@@ -25,6 +25,9 @@ public class AddHomeworkCommand extends AbstractCommand {
         }
     }
 
+    /**
+     * Adds homework into memory
+     */
     @Override
     public void execute() {
         try {
