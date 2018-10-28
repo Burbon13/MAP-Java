@@ -1,22 +1,31 @@
 package cmd.student;
 
 import cmd.AbstractCommand;
+import cmd.CommandException;
 import domain.Student;
 import service.Service;
 import service.exception.ServiceException;
+import validator.exception.ValidationException;
 
 public class UpdateStudentCommand extends AbstractCommand {
     private int studentID, newGroup;
     private String newName, newLabTeacher, newEmail;
 //    private Student oldStudent;
 
-    public UpdateStudentCommand(Service service, int studentID, int newGroup, String newName, String newLabTeacher, String newEmail) {
+    public UpdateStudentCommand(Service service, String[] sep_params) {
         super(service);
-        this.studentID = studentID;
-        this.newGroup = newGroup;
-        this.newName = newName;
-        this.newLabTeacher = newLabTeacher;
-        this.newEmail = newEmail;
+        if(sep_params.length != 6)
+            throw new CommandException("Invalid parameters!");
+
+        try {
+            this.studentID = Integer.parseInt(sep_params[1]);
+            this.newGroup = Integer.parseInt(sep_params[3]);
+        } catch (NumberFormatException ex) {
+            throw new CommandException("Invalid parameters! " + ex.getMessage());
+        }
+        this.newName = sep_params[2];
+        this.newEmail = sep_params[4];
+        this.newLabTeacher = sep_params[5];
     }
 
     @Override
@@ -25,7 +34,7 @@ public class UpdateStudentCommand extends AbstractCommand {
 //            oldStudent = service.getStudent(studentID);
             service.updateStudent(studentID, newName, newGroup, newEmail, newLabTeacher);
             System.out.println("Student updated!");
-        }catch (ServiceException ex) {
+        }catch (ServiceException | ValidationException ex) {
             System.out.println(ex.getMessage());
         }
     }

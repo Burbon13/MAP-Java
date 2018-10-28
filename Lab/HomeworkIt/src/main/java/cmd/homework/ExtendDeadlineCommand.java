@@ -1,16 +1,24 @@
 package cmd.homework;
 
 import cmd.AbstractCommand;
+import cmd.CommandException;
 import service.Service;
 import service.exception.ServiceException;
 
 public class ExtendDeadlineCommand extends AbstractCommand {
     private int number /*, oldDeadline*/, newDeadline;
 
-    public ExtendDeadlineCommand(Service service, int number, int newDeadline) {
+    public ExtendDeadlineCommand(Service service, String[] sep_params) {
         super(service);
-        this.number = number;
-        this.newDeadline = newDeadline;
+        if(sep_params.length != 3)
+            throw new CommandException("Invalid parameters!");
+
+         try {
+             this.number = Integer.parseInt(sep_params[1]);
+             this.newDeadline = Integer.parseInt(sep_params[2]);
+         } catch (NumberFormatException ex) {
+             throw new CommandException("Invalid parameters! " + ex.getMessage());
+         }
     }
 
     @Override

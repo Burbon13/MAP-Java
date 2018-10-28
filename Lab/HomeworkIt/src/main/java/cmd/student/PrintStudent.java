@@ -1,14 +1,21 @@
 package cmd.student;
 
 import cmd.AbstractCommand;
+import cmd.CommandException;
 import service.Service;
 
 public class PrintStudent extends AbstractCommand {
     private int studentID;
 
-    public PrintStudent(Service service, int studentID) {
+    public PrintStudent(Service service, String[] sep_params) {
         super(service);
-        this.studentID = studentID;
+        if(sep_params.length != 2)
+            throw new CommandException("Invalid parameters!");
+        try {
+            this.studentID = Integer.parseInt(sep_params[1]);
+        } catch (NumberFormatException ex) {
+            throw new CommandException("Invalid parameters! " + ex.getMessage());
+        }
     }
 
     @Override
