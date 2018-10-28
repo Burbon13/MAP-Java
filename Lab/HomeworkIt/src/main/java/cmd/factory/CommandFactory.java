@@ -8,6 +8,7 @@ import cmd.student.*;
 import service.Service;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,7 +29,11 @@ public class CommandFactory {
     private CommandFactory() {}
 
     public static Command getCommand(String command, Service service) {
-        String[] cmd = command.split(" ");
+        //TODO: Document yourself a little bit more about this :))
+        String[] cmd = Arrays.stream(command.split(" (?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)")).filter(s -> s.length() > 0).toArray(String[]::new);
+        for(int i = 0; i < cmd.length; i++)
+            cmd[i] = cmd[i].replaceAll("\"", "");
+
         if(commandMap.containsKey(cmd[0])) {
             try {
                 return commandMap.get(cmd[0]).getConstructor(Service.class, String[].class).newInstance(service, cmd);
