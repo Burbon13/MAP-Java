@@ -2,10 +2,12 @@ package domain;
 
 import hasID.HasID;
 
+import java.io.Serializable;
+
 /**
  * Domain class for homework
  */
-public class Homework implements HasID<Integer> {
+public class Homework implements HasID<Integer>, Serializable {
     private int number; //unique id
     private String description;
     private int given; //week
@@ -68,7 +70,7 @@ public class Homework implements HasID<Integer> {
     }
 
     /**
-     *
+     * Getter for given week
      * @return the starting week of the homework
      */
     public int getGiven() {
@@ -76,10 +78,15 @@ public class Homework implements HasID<Integer> {
     }
 
     /**
-     *
+     * Getter for deadline week
      * @return the deadline for the homework
      */
     public int getDeadline() {
         return deadline;
+    }
+
+    @Override
+    public String toString() {
+        return "Number: " + number + " | Description: " + description + " | Week given: " + given + " | Deadline: " + deadline;
     }
 }

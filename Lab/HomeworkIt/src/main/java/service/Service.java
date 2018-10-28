@@ -2,8 +2,10 @@ package service;
 
 import domain.Homework;
 import domain.Student;
-import repository.HomeworkRepository;
-import repository.StudentRepository;
+import repository.AbstractRepository;
+import repository.CrudRepository;
+import repository.in_memory.HomeworkRepository;
+import repository.in_memory.StudentRepository;
 import service.exception.ServiceException;
 
 import java.time.LocalDate;
@@ -12,12 +14,12 @@ import java.util.Collection;
 
 
 /**
- * Service class which implements CRUD operations on students, add operation for homeworks
- * and 'update deadline' functionality for the saved homeworks
+ * Service class which implements CRUD operations on students, add operation for homework
+ * and 'update deadline' functionality for the saved homework
  */
 public class Service {
-    private HomeworkRepository homeworkRepository;
-    private StudentRepository studentRepository;
+    private CrudRepository<Integer, Homework> homeworkRepository;
+    private CrudRepository<Integer, Student> studentRepository;
     private LocalDate startingDate;
 
     /**
@@ -26,7 +28,7 @@ public class Service {
      * @param studentRepository repository responsible for managing the students
      * @param startingDate the starting date of the semester
      */
-    public Service(HomeworkRepository homeworkRepository, StudentRepository studentRepository, LocalDate startingDate) {
+    public Service(CrudRepository<Integer, Homework> homeworkRepository, CrudRepository<Integer, Student> studentRepository, LocalDate startingDate) {
         this.homeworkRepository = homeworkRepository;
         this.studentRepository = studentRepository;
         this.startingDate = startingDate;
@@ -84,7 +86,7 @@ public class Service {
      * @return all the students
      */
     public Collection<Student> getAllStudents() {
-        return studentRepository.findAll();
+        return  (Collection<Student>)studentRepository.findAll();
     }
 
     /**
@@ -97,6 +99,24 @@ public class Service {
     public void addHomework(int number, String description, int given, int deadline) {
         if(homeworkRepository.save(new Homework(number, description, given, deadline)) != null)
             throw new ServiceException("Homework already exists!");
+    }
+
+    /**
+     * Deletes homework from repository
+     * @param number the homework's id
+     * @throws ServiceException if the homework doesn't exist in the repo
+     */
+    public void deleteHomework(int number) {
+        if(homeworkRepository.delete(number) == null)
+            throw new ServiceException(String.format("Homework with id %d doesn't exist!", number));
+    }
+
+    /**
+     * Gets all the homework
+     * @return the homework
+     */
+    public Collection<Homework> getAllHomework() {
+        return (Collection<Homework>)homeworkRepository.findAll();
     }
 
     /**
