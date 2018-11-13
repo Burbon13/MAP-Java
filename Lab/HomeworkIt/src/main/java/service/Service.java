@@ -11,7 +11,10 @@ import repository.in_memory.HomeworkRepository;
 import repository.in_memory.StudentRepository;
 import service.exception.ServiceException;
 
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.Collection;
@@ -167,6 +170,10 @@ public class Service {
 
         if(markRepository.save(new Mark(student, homework, value, description)) != null)
             throw new ServiceException("Mark already exists!");
+
+        addToStudentFile(homework.getID(), value,
+                (int)ChronoUnit.DAYS.between(startingDate, LocalDate.now())/7 + 1, homework.getDeadline(),
+                description, student.getName());
     }
 
     private double calculateMinusPoints(Homework homework, double value, boolean spare) {
@@ -185,6 +192,34 @@ public class Service {
             value = 1;
 
         return value;
+    }
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    private void addToStudentFile(int homeworkId, double value, int weekGiven, int deadline, String description, String sName) {
+        File yourFile = new File("./data/" + sName  + ".txt");
+        try {
+            yourFile.createNewFile(); // if file already exists will do nothing
+            FileOutputStream oFile = new FileOutputStream(yourFile, true);
+            DataOutputStream stream = new DataOutputStream(oFile);
+            BufferedOutputStream buff = new BufferedOutputStream(stream);
+
+            buff.write(("Tema: " + homeworkId + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("Nota: " + value + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("Predata in saptamana: " + weekGiven + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("Deadline: " + deadline + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("Feedback: " + description + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("\n").getBytes(StandardCharsets.UTF_8));
+
+
+            buff.flush();
+            buff.close();
+            stream.close();
+            oFile.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public Collection<Mark> getAllMarks() {
