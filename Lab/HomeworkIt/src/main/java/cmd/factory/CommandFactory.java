@@ -6,6 +6,8 @@ import cmd.homework.AddHomeworkServiceCommand;
 import cmd.homework.DeleteHomeworkCommand;
 import cmd.homework.ExtendDeadlineServiceCommand;
 import cmd.homework.PrintAllHomeworkCommand;
+import cmd.mark.AddMarkCommand;
+import cmd.mark.PrintAllMarksCommand;
 import cmd.student.*;
 import service.Service;
 
@@ -28,6 +30,8 @@ public class CommandFactory {
         commandMap.put("print_students", PrintAllStudentsCommand.class);
         commandMap.put("print_homework", PrintAllHomeworkCommand.class);
         commandMap.put("del_homework", DeleteHomeworkCommand.class);
+        commandMap.put("add_mark", AddMarkCommand.class);
+        commandMap.put("show_marks", PrintAllMarksCommand.class);
     }
 
     private CommandFactory() {}

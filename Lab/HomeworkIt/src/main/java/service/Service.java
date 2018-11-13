@@ -1,7 +1,10 @@
 package service;
 
 import domain.Homework;
+import domain.Mark;
+import domain.Pair;
 import domain.Student;
+//import javafx.util.Pair;
 import repository.AbstractRepository;
 import repository.CrudRepository;
 import repository.in_memory.HomeworkRepository;
@@ -20,6 +23,7 @@ import java.util.Collection;
 public class Service {
     private CrudRepository<Integer, Homework> homeworkRepository;
     private CrudRepository<Integer, Student> studentRepository;
+    private CrudRepository<Pair<Integer,Integer>, Mark> markRepository;
     private LocalDate startingDate;
 
     /**
@@ -32,6 +36,14 @@ public class Service {
         this.homeworkRepository = homeworkRepository;
         this.studentRepository = studentRepository;
         this.startingDate = startingDate;
+    }
+
+    public Service(CrudRepository<Integer, Homework> homeworkRepository, CrudRepository<Integer, Student> studentRepository,
+                       LocalDate startingDate, CrudRepository<Pair<Integer,Integer>, Mark> markRepository) {
+        this.homeworkRepository = homeworkRepository;
+        this.studentRepository = studentRepository;
+        this.startingDate = startingDate;
+        this.markRepository = markRepository;
     }
 
     /**
@@ -139,5 +151,21 @@ public class Service {
             return;
         }
         throw new ServiceException("Too late, you cannot extend the deadline anymore!");
+    }
+
+    public void addMark(int studentId, int homeworkId, int value, String description) {
+        Student student = studentRepository.findOne(studentId);
+        if(student == null)
+            throw new ServiceException("The student with the given id doesn't exist!");
+        Homework homework = homeworkRepository.findOne(homeworkId);
+        if(homeworkRepository.findOne(homeworkId) == null)
+            throw new ServiceException("The homework with the given id doesn't exist");
+
+        if(markRepository.save(new Mark(student, homework, value, description)) != null)
+            throw new ServiceException("Mark already exists!");
+    }
+
+    public Collection<Mark> getAllMarks() {
+        return (Collection<Mark>)markRepository.findAll();
     }
 }
