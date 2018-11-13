@@ -23,7 +23,7 @@ public class Application {
         try {
             HomeworkFileRepository homeworkRepository = new HomeworkFileRepository(new HomeworkValidator(), "homework.txt");
             StudentFileRepository studentRepository = new StudentFileRepository(new StudentValidator(), "students.txt");
-            MarkRepository markRepository = new MarkRepository(new MarkValidator());
+//            MarkRepository markRepository = new MarkRepository(new MarkValidator());
             MarkFileRepository markFileRepository = new MarkFileRepository(new MarkValidator(), "catalog.txt");
             LocalDate semesterStart = LocalDate.of(2018, 10, 1);
 //            service = new Service(homeworkRepository, studentRepository, semesterStart);

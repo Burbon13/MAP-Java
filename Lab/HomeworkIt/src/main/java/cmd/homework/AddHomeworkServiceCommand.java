@@ -12,6 +12,7 @@ public class AddHomeworkServiceCommand extends AbstractServiceCommand {
 
     public AddHomeworkServiceCommand(Service service, String[] sep_params) {
         super(service);
+        
         if(sep_params.length != 5)
             throw new CommandException("Invalid parameters!");
 

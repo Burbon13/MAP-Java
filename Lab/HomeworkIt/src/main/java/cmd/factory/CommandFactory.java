@@ -45,9 +45,13 @@ public class CommandFactory {
      */
     public static Command getCommand(String command, Service service) {
         //TODO: Document yourself a little bit more about this :))
-        String[] cmd = Arrays.stream(command.split(" (?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)")).filter(s -> s.length() > 0).toArray(String[]::new);
-        for(int i = 0; i < cmd.length; i++)
-            cmd[i] = cmd[i].replaceAll("\"", "");
+        String[] cmd = Arrays.stream(command.split(" (?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)"))
+                .filter(s -> s.length() > 0)
+                .map(s -> s.replaceAll("\"", ""))
+                .toArray(String[]::new);
+
+//        for(int i = 0; i < cmd.length; i++)
+//            cmd[i] = cmd[i].replaceAll("\"", "");
 
         if(cmd.length > 0 && commandMap.containsKey(cmd[0])) {
             try {
