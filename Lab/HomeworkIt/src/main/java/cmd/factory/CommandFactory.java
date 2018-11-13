@@ -49,7 +49,7 @@ public class CommandFactory {
         for(int i = 0; i < cmd.length; i++)
             cmd[i] = cmd[i].replaceAll("\"", "");
 
-        if(commandMap.containsKey(cmd[0])) {
+        if(cmd.length > 0 && commandMap.containsKey(cmd[0])) {
             try {
                 return commandMap.get(cmd[0]).getConstructor(Service.class, String[].class).newInstance(service, cmd);
             } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException | CommandException e) {

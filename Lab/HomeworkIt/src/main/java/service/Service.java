@@ -13,6 +13,7 @@ import service.exception.ServiceException;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 
 
@@ -153,7 +154,7 @@ public class Service {
         throw new ServiceException("Too late, you cannot extend the deadline anymore!");
     }
 
-    public void addMark(int studentId, int homeworkId, int value, String description) {
+    public void addMark(int studentId, int homeworkId, double value, String description, boolean spare) {
         Student student = studentRepository.findOne(studentId);
         if(student == null)
             throw new ServiceException("The student with the given id doesn't exist!");
@@ -161,8 +162,29 @@ public class Service {
         if(homeworkRepository.findOne(homeworkId) == null)
             throw new ServiceException("The homework with the given id doesn't exist");
 
+        //TODO: Calculate the minus points
+        value = calculateMinusPoints(homework, value, spare);
+
         if(markRepository.save(new Mark(student, homework, value, description)) != null)
             throw new ServiceException("Mark already exists!");
+    }
+
+    private double calculateMinusPoints(Homework homework, double value, boolean spare) {
+        if(spare)
+            return value;
+
+        LocalDate now = LocalDate.now();
+
+        int diff = ((int)ChronoUnit.DAYS.between(startingDate, now)/7 + 1) - homework.getDeadline();
+
+        if(diff > 0 && diff <= 2) {
+            System.out.println("Intarziat cu " + diff + " saptamani!");
+            value -= 2.5f * (double)diff;
+            value = value > 1 ? value : 1;
+        } else if(diff > 2)
+            value = 1;
+
+        return value;
     }
 
     public Collection<Mark> getAllMarks() {
