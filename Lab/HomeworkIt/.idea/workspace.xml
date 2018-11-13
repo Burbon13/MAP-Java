@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1db5dd96-573a-4a88-b40e-6877c68a7360" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/catalog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/catalog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -53,27 +54,27 @@
     <session id="774505670">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="85" />
-          <entry key="txt" value="5" />
+          <entry key="java" value="88" />
+          <entry key="txt" value="6" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="85" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="JAVA" value="88" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="36" />
-          <entry key="java" value="4547" />
+          <entry key="java" value="4666" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4547" />
+          <entry key="JAVA" value="4666" />
           <entry key="PLAIN_TEXT" value="36" />
         </counts>
       </usages-collector>
@@ -106,11 +107,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/Mark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
+            <state relative-caret-position="270">
               <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="29" column="106" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -127,11 +137,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_file/MarkFileRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="64" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/Service.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="200" column="71" selection-start-line="200" selection-start-column="71" selection-end-line="200" selection-end-column="71" />
+            <state relative-caret-position="454">
+              <caret line="213" column="25" lean-forward="true" selection-start-line="213" selection-start-column="25" selection-end-line="213" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#7692#7738#0" expanded="true" />
@@ -206,7 +237,6 @@
         <option value="$PROJECT_DIR$/src/main/java/repository/AbstractRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/HomeworkService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/MarkService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/in_memory/MarkRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/in_file/MarkFileRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/cmd/mark/PrintAllMarksCommand.java" />
@@ -216,6 +246,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cmd/factory/CommandFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/cmd/mark/AddMarkCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Application.java" />
       </list>
     </option>
   </component>
@@ -365,7 +396,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542135572256" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542136820078" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -456,7 +487,7 @@
       <workItem from="1541026416734" duration="86000" />
       <workItem from="1542044091190" duration="4003000" />
       <workItem from="1542102171679" duration="3244000" />
-      <workItem from="1542124219728" duration="8805000" />
+      <workItem from="1542124219728" duration="9933000" />
     </task>
     <servers />
   </component>
@@ -478,12 +509,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23766000" />
+    <option name="totallyTimeSpent" value="24894000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25878593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25878593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -492,7 +523,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45425868" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6182965" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39957938" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -641,9 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/catalog.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/MarkService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/validator/HomeworkValidator.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -716,16 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Mark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cmd/homework/AddHomeworkServiceCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -774,40 +792,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="44" column="106" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_file/MarkFileRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/data/catalog.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="200" column="71" selection-start-line="200" selection-start-column="71" selection-end-line="200" selection-end-column="71" />
+        <state relative-caret-position="454">
+          <caret line="213" column="25" lean-forward="true" selection-start-line="213" selection-start-column="25" selection-end-line="213" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#7692#7738#0" expanded="true" />
             <element signature="e#7517#7518#0" expanded="true" />
             <element signature="e#7582#7583#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Mark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/in_file/MarkFileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/AbstractFileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="64" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="29" column="106" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
         </state>
       </provider>
     </entry>
