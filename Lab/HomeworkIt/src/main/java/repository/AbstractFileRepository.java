@@ -6,6 +6,7 @@ import validator.Validator;
 import validator.exception.ValidationException;
 
 import java.io.*;
+import java.util.stream.IntStream;
 
 public abstract class AbstractFileRepository<ID, E extends Serializable & HasID<ID>> extends AbstractRepository<ID, E> {
     private String fileName;
@@ -43,15 +44,17 @@ public abstract class AbstractFileRepository<ID, E extends Serializable & HasID<
     @SuppressWarnings("unchecked")
     public void loadFromFile(){
         try(ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("./data/" + fileName))) {
-            try {
-                int len = inputStream.readInt();
-                for(int i = 0; i < len; i++){
-                    E entity = (E) inputStream.readObject();
-                    super.save(entity);
+            int len = inputStream.readInt();
+            IntStream.range(0, len).forEach(i -> {
+                try {
+                    super.save((E) inputStream.readObject());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
                 }
-            } catch (ClassNotFoundException ex) {
-                throw new FileRepositoryException(ex);
-            }
+
+            });
         } catch (IOException ex) {
             throw new FileRepositoryException(ex);
         }
@@ -64,8 +67,13 @@ public abstract class AbstractFileRepository<ID, E extends Serializable & HasID<
 
             objectOutputStream.writeInt(findAll().size());
 
-            for(E entity: findAll())
-                objectOutputStream.writeObject(entity);
+            findAll().forEach(entity -> {
+                try {
+                    objectOutputStream.writeObject(entity);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
 
             objectOutputStream.close();
             fileOutputStream.close();

@@ -1,15 +1,22 @@
 package service;
 
 import domain.Homework;
+import domain.Mark;
+import domain.Pair;
 import domain.Student;
+//import javafx.util.Pair;
 import repository.AbstractRepository;
 import repository.CrudRepository;
 import repository.in_memory.HomeworkRepository;
 import repository.in_memory.StudentRepository;
 import service.exception.ServiceException;
 
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 
 
@@ -20,6 +27,7 @@ import java.util.Collection;
 public class Service {
     private CrudRepository<Integer, Homework> homeworkRepository;
     private CrudRepository<Integer, Student> studentRepository;
+    private CrudRepository<Pair<Integer,Integer>, Mark> markRepository;
     private LocalDate startingDate;
 
     /**
@@ -32,6 +40,14 @@ public class Service {
         this.homeworkRepository = homeworkRepository;
         this.studentRepository = studentRepository;
         this.startingDate = startingDate;
+    }
+
+    public Service(CrudRepository<Integer, Homework> homeworkRepository, CrudRepository<Integer, Student> studentRepository,
+                       LocalDate startingDate, CrudRepository<Pair<Integer,Integer>, Mark> markRepository) {
+        this.homeworkRepository = homeworkRepository;
+        this.studentRepository = studentRepository;
+        this.startingDate = startingDate;
+        this.markRepository = markRepository;
     }
 
     /**
@@ -139,5 +155,74 @@ public class Service {
             return;
         }
         throw new ServiceException("Too late, you cannot extend the deadline anymore!");
+    }
+
+    public void addMark(int studentId, int homeworkId, double value, String description, boolean spare) {
+        Student student = studentRepository.findOne(studentId);
+        if(student == null)
+            throw new ServiceException("The student with the given id doesn't exist!");
+        Homework homework = homeworkRepository.findOne(homeworkId);
+        if(homeworkRepository.findOne(homeworkId) == null)
+            throw new ServiceException("The homework with the given id doesn't exist");
+
+        //TODO: Calculate the minus points
+        value = calculateMinusPoints(homework, value, spare);
+
+        if(markRepository.save(new Mark(student, homework, value, description)) != null)
+            throw new ServiceException("Mark already exists!");
+
+        addToStudentFile(homework.getID(), value,
+                (int)ChronoUnit.DAYS.between(startingDate, LocalDate.now())/7 + 1, homework.getDeadline(),
+                description, student.getName());
+    }
+
+    private double calculateMinusPoints(Homework homework, double value, boolean spare) {
+        if(spare)
+            return value;
+
+        LocalDate now = LocalDate.now();
+
+        int diff = ((int)ChronoUnit.DAYS.between(startingDate, now)/7 + 1) - homework.getDeadline();
+
+        if(diff > 0 && diff <= 2) {
+            System.out.println("Intarziat cu " + diff + " saptamani!");
+            value -= 2.5f * (double)diff;
+            value = value > 1 ? value : 1;
+        } else if(diff > 2)
+            value = 1;
+
+        return value;
+    }
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    private void addToStudentFile(int homeworkId, double value, int weekGiven, int deadline, String description, String sName) {
+        File yourFile = new File("./data/" + sName  + ".txt");
+        try {
+            yourFile.createNewFile(); // if file already exists will do nothing
+            FileOutputStream oFile = new FileOutputStream(yourFile, true);
+            DataOutputStream stream = new DataOutputStream(oFile);
+            BufferedOutputStream buff = new BufferedOutputStream(stream);
+
+            buff.write(("Tema: " + homeworkId + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("Nota: " + value + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("Predata in saptamana: " + weekGiven + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("Deadline: " + deadline + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("Feedback: " + description + "\n").getBytes(StandardCharsets.UTF_8));
+            buff.write(("\n").getBytes(StandardCharsets.UTF_8));
+
+
+            buff.flush();
+            buff.close();
+            stream.close();
+            oFile.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public Collection<Mark> getAllMarks() {
+        return (Collection<Mark>)markRepository.findAll();
     }
 }

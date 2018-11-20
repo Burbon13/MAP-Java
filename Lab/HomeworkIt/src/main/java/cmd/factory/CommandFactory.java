@@ -6,6 +6,8 @@ import cmd.homework.AddHomeworkServiceCommand;
 import cmd.homework.DeleteHomeworkCommand;
 import cmd.homework.ExtendDeadlineServiceCommand;
 import cmd.homework.PrintAllHomeworkCommand;
+import cmd.mark.AddMarkCommand;
+import cmd.mark.PrintAllMarksCommand;
 import cmd.student.*;
 import service.Service;
 
@@ -28,6 +30,8 @@ public class CommandFactory {
         commandMap.put("print_students", PrintAllStudentsCommand.class);
         commandMap.put("print_homework", PrintAllHomeworkCommand.class);
         commandMap.put("del_homework", DeleteHomeworkCommand.class);
+        commandMap.put("add_mark", AddMarkCommand.class);
+        commandMap.put("show_marks", PrintAllMarksCommand.class);
     }
 
     private CommandFactory() {}
@@ -41,11 +45,15 @@ public class CommandFactory {
      */
     public static Command getCommand(String command, Service service) {
         //TODO: Document yourself a little bit more about this :))
-        String[] cmd = Arrays.stream(command.split(" (?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)")).filter(s -> s.length() > 0).toArray(String[]::new);
-        for(int i = 0; i < cmd.length; i++)
-            cmd[i] = cmd[i].replaceAll("\"", "");
+        String[] cmd = Arrays.stream(command.split(" (?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)"))
+                .filter(s -> s.length() > 0)
+                .map(s -> s.replaceAll("\"", ""))
+                .toArray(String[]::new);
 
-        if(commandMap.containsKey(cmd[0])) {
+//        for(int i = 0; i < cmd.length; i++)
+//            cmd[i] = cmd[i].replaceAll("\"", "");
+
+        if(cmd.length > 0 && commandMap.containsKey(cmd[0])) {
             try {
                 return commandMap.get(cmd[0]).getConstructor(Service.class, String[].class).newInstance(service, cmd);
             } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException | CommandException e) {
