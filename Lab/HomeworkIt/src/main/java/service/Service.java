@@ -10,6 +10,9 @@ import repository.CrudRepository;
 import repository.in_memory.HomeworkRepository;
 import repository.in_memory.StudentRepository;
 import service.exception.ServiceException;
+import view.Observable;
+import view.Observer;
+import view.StudentEvent;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -17,6 +20,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.Collection;
 
 
@@ -24,11 +28,13 @@ import java.util.Collection;
  * Service class which implements CRUD operations on students, add operation for homework
  * and 'update deadline' functionality for the saved homework
  */
-public class Service {
+public class Service implements Observable<StudentEvent> {
     private CrudRepository<Integer, Homework> homeworkRepository;
     private CrudRepository<Integer, Student> studentRepository;
     private CrudRepository<Pair<Integer,Integer>, Mark> markRepository;
     private LocalDate startingDate;
+    //Added for implementing observable
+    private ArrayList<Observer<StudentEvent>> observers;
 
     /**
      * Constructor
@@ -48,6 +54,21 @@ public class Service {
         this.studentRepository = studentRepository;
         this.startingDate = startingDate;
         this.markRepository = markRepository;
+    }
+
+    @Override
+    public void addObserver(Observer<StudentEvent> e) {
+        observers.add(e);
+    }
+
+    @Override
+    public void removeObserver(Observer<StudentEvent> e) {
+        observers.remove(e);
+    }
+
+    @Override
+    public void notifyObserver(StudentEvent e) {
+        observers.forEach(obs -> obs.update(e));
     }
 
     /**

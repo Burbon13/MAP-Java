@@ -1,5 +1,7 @@
 import cmd.factory.CommandFactory;
 import cmd.factory.CommandFactoryException;
+import javafx.application.Application;
+import javafx.stage.Stage;
 import repository.exception.FileRepositoryException;
 import repository.in_file.HomeworkFileRepository;
 import repository.in_file.MarkFileRepository;
@@ -15,11 +17,21 @@ import validator.StudentValidator;
 import java.io.*;
 import java.time.LocalDate;
 
-public class Application {
-    private static BufferedReader reader;
-    private static Service service;
+public class Main extends Application {
+    private  BufferedReader reader;
+    private  Service service;
 
     static {
+
+    }
+
+    @SuppressWarnings("InfiniteLoopStatement")
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
         try {
             HomeworkFileRepository homeworkRepository = new HomeworkFileRepository(new HomeworkValidator(), "homework.txt");
             StudentFileRepository studentRepository = new StudentFileRepository(new StudentValidator(), "students.txt");
@@ -32,10 +44,7 @@ public class Application {
         }catch (FileRepositoryException ex) {
             System.out.println(ex.getMessage());
         }
-    }
 
-    @SuppressWarnings("InfiniteLoopStatement")
-    public static void main(String[] args) {
         while(true) {
             try {
                 String command = reader.readLine();
@@ -43,6 +52,6 @@ public class Application {
             } catch (IOException | CommandFactoryException ex) {
                 System.out.println(ex.getMessage());
             }
-       }
+        }
     }
 }
