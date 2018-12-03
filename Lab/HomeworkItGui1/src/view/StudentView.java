@@ -88,6 +88,7 @@ public class StudentView {
         Button update = new Button("Update");
         update.setOnAction(event -> {
             this.updateHandler();
+            tableView.refresh();
         });
         buttonsBox.getChildren().add(update);
 

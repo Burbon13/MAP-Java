@@ -1,6 +1,10 @@
 package domain;
 
 import hasID.HasID;
+import javafx.beans.Observable;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import javafx.util.Callback;
 
 import java.io.Serializable;
 
