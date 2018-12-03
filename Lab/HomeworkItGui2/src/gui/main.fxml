@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerGUI">
   <tabs>
     <Tab text="Students">
       <content>
@@ -16,7 +16,7 @@
                <children>
                   <SplitPane dividerPositions="0.6402805611222445" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <items>
-                        <TableView fx:id="tvStudents">
+                        <TableView fx:id="tvStudentsS">
                           <columns>
                             <TableColumn prefWidth="93.0" text="Id" />
                             <TableColumn prefWidth="161.0" text="Name" />
@@ -47,32 +47,32 @@
                               <Label text="Group" GridPane.rowIndex="2" />
                               <Label text="Email" GridPane.rowIndex="3" />
                               <Label text="Teacher" GridPane.rowIndex="4" />
-                              <TextField fx:id="tfIDS"  prefHeight="25.0" prefWidth="259.0" promptText="Some id" GridPane.columnIndex="1">
+                              <TextField fx:id="tfIdS" prefHeight="25.0" prefWidth="259.0" promptText="Some id" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin></TextField>
-                              <TextField promptText="Give me that name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <TextField fx:id="tfNameS" promptText="Give me that name" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin></TextField>
-                              <TextField promptText="Grouping part" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <TextField fx:id="tfGroupS" promptText="Grouping part" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin></TextField>
-                              <TextField promptText="Email contact" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <TextField fx:id="tfEmailS" promptText="Email contact" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin></TextField>
-                              <TextField promptText="Who teaches" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <TextField fx:id="tfTeacherS" promptText="Who teaches" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin></TextField>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnSpan="2" GridPane.rowIndex="5">
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Add" />
-                                    <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Update" />
-                                    <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Remove" />
-                                    <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Clear" />
+                                    <Button fx:id="buAddS" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Add" />
+                                    <Button fx:id="buUpdateS" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Update" />
+                                    <Button fx:id="buRemoveS" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Remove" />
+                                    <Button fx:id="buClearS" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Clear" />
                                  </children>
                                  <GridPane.margin>
                                     <Insets />
