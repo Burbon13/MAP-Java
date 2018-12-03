@@ -1,3 +1,4 @@
+import gui.ControllerGUI;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,7 +9,16 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("gui/main.fxml"));
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource(
+                        "gui/main.fxml"
+                )
+        );
+
+        Parent root = loader.load();
+
+//        loader.<ControllerGUI>getController().initService(null);
+//
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 1000, 700));
         primaryStage.setResizable(false);
