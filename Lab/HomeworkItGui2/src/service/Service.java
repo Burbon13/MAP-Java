@@ -4,21 +4,13 @@ import domain.Homework;
 import domain.Mark;
 import domain.Pair;
 import domain.Student;
-//import javafx.util.Pair;
-import repository.AbstractRepository;
 import repository.CrudRepository;
-import repository.in_memory.HomeworkRepository;
-import repository.in_memory.StudentRepository;
 import service.exception.ServiceException;
-import view.ChangeEventType;
-import view.Observable;
-import view.Observer;
-import view.StudentEvent;
+import view.*;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -29,13 +21,13 @@ import java.util.Collection;
  * Service class which implements CRUD operations on students, add operation for homework
  * and 'update deadline' functionality for the saved homework
  */
-public class Service implements Observable<StudentEvent> {
+public class Service implements Observable<AppEvent> {
     private CrudRepository<Integer, Homework> homeworkRepository;
     private CrudRepository<Integer, Student> studentRepository;
     private CrudRepository<Pair<Integer,Integer>, Mark> markRepository;
     private LocalDate startingDate;
     //Added for implementing observable
-    private ArrayList<Observer<StudentEvent>> observers = new ArrayList<>();
+    private ArrayList<Observer<AppEvent>> observers = new ArrayList<>();
 
     /**
      * Constructor
@@ -58,17 +50,17 @@ public class Service implements Observable<StudentEvent> {
     }
 
     @Override
-    public void addObserver(Observer<StudentEvent> e) {
+    public void addObserver(Observer<AppEvent> e) {
         observers.add(e);
     }
 
     @Override
-    public void removeObserver(Observer<StudentEvent> e) {
+    public void removeObserver(Observer<AppEvent> e) {
         observers.remove(e);
     }
 
     @Override
-    public void notifyObserver(StudentEvent e) {
+    public void notifyObserver(AppEvent e) {
         observers.forEach(obs -> obs.update(e));
     }
 
@@ -84,7 +76,7 @@ public class Service implements Observable<StudentEvent> {
     public void addStudent(int studentID, String name, int group, String email, String labTeacher) {
         if(studentRepository.save(new Student(studentID, name, group, email, labTeacher))  != null)
             throw new ServiceException("Student already exists!");
-        notifyObserver(new StudentEvent(null, getStudent(studentID), ChangeEventType.ADD));
+        notifyObserver(new AppEvent(null, getStudent(studentID), EventClass.STUDENTS, ChangeEventType.ADD));
     }
 
     /**
@@ -100,7 +92,7 @@ public class Service implements Observable<StudentEvent> {
         Student stud = getStudent(studentID);
         if(studentRepository.update(new Student(studentID, name, group, email, labTeacher)) != null)
             throw new ServiceException("Student doesn't exist!");
-        notifyObserver(new StudentEvent(stud, getStudent(studentID), ChangeEventType.UPDATE));
+        notifyObserver(new AppEvent(stud, getStudent(studentID), EventClass.STUDENTS, ChangeEventType.UPDATE));
     }
 
     /**
@@ -112,7 +104,7 @@ public class Service implements Observable<StudentEvent> {
         Student stud = studentRepository.delete(studentID);
         if(stud == null)
             throw new ServiceException("Student doesn't exist!");
-        notifyObserver(new StudentEvent(null, stud, ChangeEventType.DELETE));
+        notifyObserver(new AppEvent(null, stud, EventClass.STUDENTS, ChangeEventType.DELETE));
     }
 
     /**

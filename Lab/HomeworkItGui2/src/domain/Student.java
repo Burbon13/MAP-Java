@@ -1,18 +1,15 @@
 package domain;
 
 import hasID.HasID;
-import javafx.beans.Observable;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import javafx.util.Callback;
+import view.DataEvent;
 
 import java.io.Serializable;
 
 /**
  * Domain class for student
  */
-public class Student implements HasID<Integer>, Serializable {
-    private int studentID; //Numarul matricol
+public class Student implements HasID<Integer>, Serializable, DataEvent {
+    private int ID; //Numarul matricol
     private String name;
     private int group;
     private String email;
@@ -27,7 +24,7 @@ public class Student implements HasID<Integer>, Serializable {
      * @param labTeacher the student's laboratory teacher name
      */
     public Student(int studentID, String name, int group, String email, String labTeacher) {
-        this.studentID = studentID;
+        this.ID = studentID;
         this.name = name;
         this.group = group;
         this.email = email;
@@ -40,7 +37,7 @@ public class Student implements HasID<Integer>, Serializable {
      */
     @Override
     public Integer getID() {
-        return studentID;
+        return ID;
     }
 
     /**
@@ -49,13 +46,13 @@ public class Student implements HasID<Integer>, Serializable {
      */
     @Override
     public void setID(Integer studentID) {
-        this.studentID = studentID;
+        this.ID = studentID;
     }
 
     /**
      *
      * @param obj instance of Object
-     * @return true is obj is a Student instance and if the obj studentID equals to the current studentID
+     * @return true is obj is a Student instance and if the obj ID equals to the current ID
      */
     @Override
     public boolean equals(Object obj) {
@@ -65,7 +62,7 @@ public class Student implements HasID<Integer>, Serializable {
         if(!(obj instanceof Student))
             return false;
 
-        return this.studentID == ((Student) obj).studentID;
+        return this.ID == ((Student) obj).ID;
     }
 
     /**
@@ -102,6 +99,6 @@ public class Student implements HasID<Integer>, Serializable {
 
     @Override
     public String toString() {
-        return "ID: " + studentID + " | Name: " + name + " | Group: " + group + " | Email: " + email + " | Teacher: " + labTeacher;
+        return "ID: " + ID + " | Name: " + name + " | Group: " + group + " | Email: " + email + " | Teacher: " + labTeacher;
     }
 }

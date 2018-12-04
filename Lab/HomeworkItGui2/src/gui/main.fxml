@@ -18,11 +18,11 @@
                      <items>
                         <TableView fx:id="tvStudentsS">
                           <columns>
-                            <TableColumn prefWidth="93.0" text="Id" />
-                            <TableColumn prefWidth="161.0" text="Name" />
-                              <TableColumn prefWidth="75.0" text="Group" />
-                              <TableColumn prefWidth="75.0" text="Email" />
-                              <TableColumn prefWidth="75.0" text="Teacher" />
+                            <TableColumn fx:id="idColumn" prefWidth="93.0" text="Id" />
+                            <TableColumn fx:id="nameColumn" prefWidth="161.0" text="Name" />
+                              <TableColumn fx:id="groupColumn" prefWidth="75.0" text="Group" />
+                              <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+                              <TableColumn fx:id="labTeacherColumn" prefWidth="75.0" text="Teacher" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -69,10 +69,10 @@
                                  </GridPane.margin></TextField>
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnSpan="2" GridPane.rowIndex="5">
                                  <children>
-                                    <Button fx:id="buAddS" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Add" />
-                                    <Button fx:id="buUpdateS" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Update" />
-                                    <Button fx:id="buRemoveS" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Remove" />
-                                    <Button fx:id="buClearS" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="Clear" />
+                                    <Button fx:id="buAddS" mnemonicParsing="false" onAction="#addStudentListener" prefHeight="50.0" prefWidth="70.0" text="Add" />
+                                    <Button fx:id="buUpdateS" mnemonicParsing="false" onAction="#updateStudentListener" prefHeight="50.0" prefWidth="70.0" text="Update" />
+                                    <Button fx:id="buRemoveS" mnemonicParsing="false" onAction="#deleteStudentListener" prefHeight="50.0" prefWidth="70.0" text="Remove" />
+                                    <Button fx:id="buClearS" mnemonicParsing="false" onAction="#clearAll" prefHeight="50.0" prefWidth="70.0" text="Clear" />
                                  </children>
                                  <GridPane.margin>
                                     <Insets />

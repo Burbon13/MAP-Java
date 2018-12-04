@@ -36,7 +36,7 @@ public abstract class AbstractFileRepository<ID, E extends Serializable & HasID<
     @Override
     public E update(E entity) {
         E result = super.update(entity);
-        if(result == null)
+       if(result == null)
             saveAllToFile();
         return result;
     }
