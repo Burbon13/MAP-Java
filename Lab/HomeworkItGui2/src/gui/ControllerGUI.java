@@ -92,6 +92,8 @@ public class ControllerGUI implements Observer<AppEvent> {
     @FXML
     private TableColumn studentMarkGroupColumn;
 
+    Student selectedStudentForMark;
+
 
     @Override
     public void update(AppEvent appEvent) {
@@ -199,6 +201,19 @@ public class ControllerGUI implements Observer<AppEvent> {
         initComboBoxHomework();
         setColumnsStudentTable();
         initNameTextField();
+        cbMark.valueProperty().addListener(((observable, oldValue, newValue) -> {
+            setTextAreaDateBased((Homework)newValue);
+        }));
+    }
+
+    private void setTextAreaDateBased(Homework homework) {
+        int diff = (int) (ChronoUnit.DAYS.between(service.getStartingDate(), LocalDate.now())/7 + 1) - homework.getDeadline();
+        if((diff == 1 || diff == 2) && !isMotivated.isSelected()) {
+            taFeedback.setText("NOTA A FOST DIMINUATA CU " + String.valueOf(diff*2.5) + " PUNCTE DATORITA INTARZIERILOR");
+        } else if(diff > 2 && !isMotivated.isSelected()) {
+            taFeedback.setText("NOTA 1, PREA TARZIU");
+        } else
+            taFeedback.clear();
     }
 
     private void setColumnsStudentTable() {
@@ -209,7 +224,21 @@ public class ControllerGUI implements Observer<AppEvent> {
     }
 
     private void loadStudentForMark(Student student) {
-        
+        if(student != null) {
+            selectedStudentForMark = student;
+            tfNameMark.setEditable(false);
+            tfNameMark.setText(student.getName());
+
+        }
+    }
+
+    @FXML
+    private void clearStudentMark() {
+        selectedStudentForMark = null;
+        tfNameMark.setEditable(true);
+        tfNameMark.clear();
+        taFeedback.clear();
+        autoHomeworkSelect();
     }
 
     private void initNameTextField() {
@@ -227,17 +256,16 @@ public class ControllerGUI implements Observer<AppEvent> {
     }
 
     private void initComboBoxHomework() {
-        LocalDate now = LocalDate.now();
-
         cbMark.setItems(observableListHomework);
+        autoHomeworkSelect();
+    }
 
+    private void autoHomeworkSelect() {
+        LocalDate now = LocalDate.now();
         observableListHomework.forEach(homework -> {
             if(((int) ChronoUnit.DAYS.between(service.getStartingDate(), now)/7 + 1) - homework.getDeadline() == 0)
                 cbMark.getSelectionModel().select(homework);
         });
-
-
-
     }
 
     private void setAlarm(String msg) {
