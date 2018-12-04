@@ -24,6 +24,7 @@ import java.awt.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -204,6 +205,7 @@ public class ControllerGUI implements Observer<AppEvent> {
         cbMark.valueProperty().addListener(((observable, oldValue, newValue) -> {
             setTextAreaDateBased((Homework)newValue);
         }));
+        isMotivated.selectedProperty().addListener(list -> setTextAreaDateBased((Homework)cbMark.getValue()));
     }
 
     private void setTextAreaDateBased(Homework homework) {
@@ -266,6 +268,57 @@ public class ControllerGUI implements Observer<AppEvent> {
             if(((int) ChronoUnit.DAYS.between(service.getStartingDate(), now)/7 + 1) - homework.getDeadline() == 0)
                 cbMark.getSelectionModel().select(homework);
         });
+    }
+
+    @FXML
+    private void addMarkEvent() {
+        int idStud = 0, idHom = 0;
+        String feedback;
+        boolean pass;
+        double value = 1f;
+
+        String error = "";
+        if(cbMark.getValue() == null)
+            error += "No homework selected\n";
+        else
+            idHom = ((Homework)cbMark.getValue()).getID();
+        if(selectedStudentForMark == null)
+            error += "No student selected\n";
+        else
+            idStud = selectedStudentForMark.getID();
+        try {
+            value = Double.parseDouble(tfMarkValue.getText());
+            if(value < 1 || value > 10)
+                error += "Value must be bewteen 1 and 10\n";
+        } catch (NumberFormatException e) {
+            error += e.getMessage() + "\n";
+        }
+        if(taFeedback.getText().equals(""))
+            error += "Feedback is inexistent\n";
+        feedback = taFeedback.getText();
+        pass = isMotivated.isSelected();
+
+        if(!error.equals("")) {
+            setAlarm(error);
+            return;
+        }
+
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if(result.get() == ButtonType.OK) {
+
+            //service.addHomework(((Homework)cbMark.getValue()).getID(), taFeedback.getText(), );
+            try {
+                service.addMark(idStud, idHom, value, feedback, pass);
+//                service.addMark(selectedStudentForMark.getID(), ((Homework)cbMark.getValue()).getID(), Double.parseDouble(tfMarkValue.getText()),
+//                        taFeedback.getText(), isMotivated.isSelected());
+//                clearStudentMark();
+            } catch (ServiceException e) {
+                setAlarm(e.getMessage());
+            }
+        }
     }
 
     private void setAlarm(String msg) {
