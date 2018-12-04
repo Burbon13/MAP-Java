@@ -108,10 +108,10 @@
                      <items>
                         <TableView fx:id="tvMarks" prefHeight="200.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Name" />
-                            <TableColumn prefWidth="75.0" text="Homework" />
-                              <TableColumn prefWidth="75.0" text="Mark" />
-                              <TableColumn prefWidth="75.0" text="Feedback" />
+                            <TableColumn fx:id="studentNameMarkColumn" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="homeworkNrColumn" prefWidth="75.0" text="Homework" />
+                              <TableColumn fx:id="valueColumn" prefWidth="75.0" text="Mark" />
+                              <TableColumn fx:id="feedbackColumn" prefWidth="75.0" text="Feedback" />
                           </columns>
                            <columnResizePolicy>
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

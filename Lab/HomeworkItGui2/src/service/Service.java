@@ -190,6 +190,8 @@ public class Service implements Observable<AppEvent> {
         if(markRepository.save(new Mark(student, homework, value, description)) != null)
             throw new ServiceException("Mark already exists!");
 
+        notifyObserver(new AppEvent(null, new Mark(student, homework, value, description), EventClass.MARKS, ChangeEventType.ADD));
+
         addToStudentFile(homework.getID(), value,
                 (int)ChronoUnit.DAYS.between(startingDate, LocalDate.now())/7 + 1, homework.getDeadline(),
                 description, student.getName());

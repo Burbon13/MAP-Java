@@ -69,6 +69,7 @@ public class ControllerGUI implements Observer<AppEvent> {
 
     //Marks tab
     FilteredList<Student> filteredStudents;
+    double penalizare = 0;
 
     @FXML
     private TableView tvMarks;
@@ -92,6 +93,14 @@ public class ControllerGUI implements Observer<AppEvent> {
     private TableColumn studentMarkNameColumn;
     @FXML
     private TableColumn studentMarkGroupColumn;
+    @FXML
+    private TableColumn studentNameMarkColumn;
+    @FXML
+    private TableColumn homeworkNrColumn;
+    @FXML
+    private TableColumn valueColumn;
+    @FXML
+    private TableColumn feedbackColumn;
 
     Student selectedStudentForMark;
 
@@ -110,7 +119,8 @@ public class ControllerGUI implements Observer<AppEvent> {
             }
             tvStudentsS.refresh();
         } else if(appEvent.getEventClass() == EventClass.MARKS) {
-
+            if (appEvent.getType() == ChangeEventType.ADD)
+                observableListMarks.add((Mark)appEvent.getNewData());
         }
     }
 
@@ -206,14 +216,25 @@ public class ControllerGUI implements Observer<AppEvent> {
             setTextAreaDateBased((Homework)newValue);
         }));
         isMotivated.selectedProperty().addListener(list -> setTextAreaDateBased((Homework)cbMark.getValue()));
+        setTablewViewMarks();
+    }
+
+    private void setTablewViewMarks() {
+        tvMarks.setItems(observableListMarks);
+        studentNameMarkColumn.setCellValueFactory(new PropertyValueFactory<Mark, String>("studentName"));
+        homeworkNrColumn.setCellValueFactory(new PropertyValueFactory<Mark, Integer>("homeworkNumber"));
+        valueColumn.setCellValueFactory(new PropertyValueFactory<Mark, String>("value"));
+        feedbackColumn.setCellValueFactory(new PropertyValueFactory<Mark, String>("feedback"));
     }
 
     private void setTextAreaDateBased(Homework homework) {
         int diff = (int) (ChronoUnit.DAYS.between(service.getStartingDate(), LocalDate.now())/7 + 1) - homework.getDeadline();
         if((diff == 1 || diff == 2) && !isMotivated.isSelected()) {
             taFeedback.setText("NOTA A FOST DIMINUATA CU " + String.valueOf(diff*2.5) + " PUNCTE DATORITA INTARZIERILOR");
+            penalizare = diff*2.5;
         } else if(diff > 2 && !isMotivated.isSelected()) {
             taFeedback.setText("NOTA 1, PREA TARZIU");
+            penalizare = -1;
         } else
             taFeedback.clear();
     }
@@ -278,33 +299,53 @@ public class ControllerGUI implements Observer<AppEvent> {
         double value = 1f;
 
         String error = "";
-        if(cbMark.getValue() == null)
+        if (cbMark.getValue() == null)
             error += "No homework selected\n";
         else
-            idHom = ((Homework)cbMark.getValue()).getID();
-        if(selectedStudentForMark == null)
+            idHom = ((Homework) cbMark.getValue()).getID();
+        if (selectedStudentForMark == null)
             error += "No student selected\n";
         else
             idStud = selectedStudentForMark.getID();
         try {
             value = Double.parseDouble(tfMarkValue.getText());
-            if(value < 1 || value > 10)
+            if (value < 1 || value > 10)
                 error += "Value must be bewteen 1 and 10\n";
         } catch (NumberFormatException e) {
             error += e.getMessage() + "\n";
         }
-        if(taFeedback.getText().equals(""))
+        if (taFeedback.getText().equals(""))
             error += "Feedback is inexistent\n";
         feedback = taFeedback.getText();
         pass = isMotivated.isSelected();
 
-        if(!error.equals("")) {
+        if (!error.equals("")) {
             setAlarm(error);
             return;
         }
 
+        String content = "Name: " + selectedStudentForMark.getName() + "\n" +
+                "Homework: " + idHom + "\n";
+
+
+        if (pass) {
+            content += "Mark: " + value + "\n";
+            content += "Motivated\n";
+        }
+        else if(penalizare == -1){
+            content += "Mark: " + 1 + "\n";
+            content += "Too late\n";
+        } else if(penalizare > 0) {
+            double aux = value - penalizare;
+            if(aux < 1)
+                aux = 1;
+            content += "Mark: " + aux + "\n";
+            content += "Penalty: " + penalizare + "\n";
+        } else
+            content += "Mark: " + value + "\n";
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setContentText(content);
         Optional<ButtonType> result = alert.showAndWait();
 
         if(result.get() == ButtonType.OK) {

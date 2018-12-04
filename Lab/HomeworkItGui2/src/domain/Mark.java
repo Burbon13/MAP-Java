@@ -1,13 +1,14 @@
 package domain;
 
 import hasID.HasID;
+import view.DataEvent;
 //import javafx.util.Pair;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Mark implements Serializable, HasID<Pair<Integer, Integer>> {
+public class Mark implements Serializable, HasID<Pair<Integer, Integer>>, DataEvent {
     private Pair<Integer, Integer> id;
     private Student student;
     private Homework homework;
@@ -64,4 +65,14 @@ public class Mark implements Serializable, HasID<Pair<Integer, Integer>> {
     public void setID(Pair<Integer, Integer> integerIntegerPair) {
         id = integerIntegerPair;
     }
+
+    public String getStudentName() {
+        return student.getName();
+    }
+
+    public int getHomeworkNumber() {
+        return id.getSecond();
+    }
+
+
 }

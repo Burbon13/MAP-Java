@@ -1,0 +1,6 @@
+Tema: 7
+Nota: 4.550000000000001
+Predata in saptamana: 10
+Deadline: 8
+Feedback: NOTA A FOST DIMINUATA CU 5.0 PUNCTE DATORITA INTARZIERILOR
+
