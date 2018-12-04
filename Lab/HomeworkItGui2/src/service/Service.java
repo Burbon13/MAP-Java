@@ -244,4 +244,8 @@ public class Service implements Observable<AppEvent> {
     public Collection<Mark> getAllMarks() {
         return (Collection<Mark>)markRepository.findAll();
     }
+
+    public LocalDate getStartingDate() {
+        return startingDate;
+    }
 }

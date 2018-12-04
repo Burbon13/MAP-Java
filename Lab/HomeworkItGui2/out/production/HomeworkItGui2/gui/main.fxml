@@ -106,7 +106,7 @@
                <children>
                   <SplitPane dividerPositions="0.5" prefHeight="673.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.0">
                      <items>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
+                        <TableView fx:id="tvMarks" prefHeight="200.0" prefWidth="200.0">
                           <columns>
                             <TableColumn prefWidth="75.0" text="Name" />
                             <TableColumn prefWidth="75.0" text="Homework" />
@@ -132,17 +132,20 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
-                                          <TextField promptText="The victim" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                          <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Write everything that they did wrong!" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                          <ComboBox fx:id="cbMark" prefWidth="150.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="tfNameMark" promptText="The victim" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextArea fx:id="taFeedback" prefHeight="200.0" prefWidth="200.0" promptText="Write everything that they did wrong!" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                                           <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Add" GridPane.rowIndex="4" />
                                           <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                           <Label text="Homework" />
                                           <Label text="Name" GridPane.rowIndex="1" />
                                           <Label text="Mark" GridPane.rowIndex="2" />
-                                          <TextField promptText="Not more than 7.75" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="tfMarkValue" promptText="Not more than 7.75" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="isMotivated" mnemonicParsing="false" text="Motivated" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Label fx:id="currentDate" text="Week:" GridPane.rowIndex="5" />
                                        </children>
                                     </GridPane>
                                  </children>
@@ -152,11 +155,11 @@
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
-                                    <TableView prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <TableView fx:id="tvStudentsMarks" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <columns>
-                                        <TableColumn prefWidth="75.0" text="Id" />
-                                        <TableColumn prefWidth="75.0" text="Name" />
-                                          <TableColumn prefWidth="75.0" text="Group" />
+                                        <TableColumn fx:id="studentMarkIdColumn" prefWidth="75.0" text="Id" />
+                                        <TableColumn fx:id="studentMarkNameColumn" prefWidth="75.0" text="Name" />
+                                          <TableColumn fx:id="studentMarkGroupColumn" prefWidth="75.0" text="Group" />
                                       </columns>
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
