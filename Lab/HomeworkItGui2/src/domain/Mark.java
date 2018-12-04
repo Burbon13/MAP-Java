@@ -74,5 +74,11 @@ public class Mark implements Serializable, HasID<Pair<Integer, Integer>>, DataEv
         return id.getSecond();
     }
 
+    public String getNiceDate() {
+        return date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+    }
 
+    public int getGroup() {
+        return student.getGroup();
+    }
 }

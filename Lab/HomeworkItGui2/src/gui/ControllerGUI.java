@@ -2,6 +2,7 @@ package gui;
 
 import domain.Homework;
 import domain.Mark;
+import domain.Pair;
 import domain.Student;
 import javafx.beans.property.IntegerProperty;
 import javafx.collections.FXCollections;
@@ -21,12 +22,15 @@ import view.Event;
 
 
 import java.awt.*;
+import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 public class ControllerGUI implements Observer<AppEvent> {
@@ -105,6 +109,31 @@ public class ControllerGUI implements Observer<AppEvent> {
 
     Student selectedStudentForMark;
 
+    // Filter
+    FilteredList<Mark> filteredMarks;
+
+    @FXML
+    private ComboBox cbFilterHomework;
+    @FXML
+    private TextField tfGroupFilter;
+    @FXML
+    private TextField tfNameFilter;
+    @FXML
+    private DatePicker startingDate;
+    @FXML
+    private DatePicker endingDate;
+    @FXML
+    private TableView tvFilter;
+    @FXML
+    private TableColumn columnNameFilter;
+    @FXML
+    private TableColumn columnMarkFilter;
+    @FXML
+    private TableColumn columnHomeworkFilter;
+    @FXML
+    private TableColumn columnGroupFilter;
+    @FXML
+    private TableColumn columnDateFilter;
 
     @Override
     public void update(AppEvent appEvent) {
@@ -137,6 +166,7 @@ public class ControllerGUI implements Observer<AppEvent> {
         this.observableListHomework = FXCollections.observableList(StreamSupport.stream(service.getAllHomework().spliterator(), false).collect(Collectors.toList()));
         printStudents();
         initMarksTab();
+        initFilterTab();
     }
 
     //Student stuff
@@ -262,6 +292,8 @@ public class ControllerGUI implements Observer<AppEvent> {
         tfNameMark.setEditable(true);
         tfNameMark.clear();
         taFeedback.clear();
+        tfMarkValue.clear();
+        penalizare = 0;
         autoHomeworkSelect();
     }
 
@@ -364,10 +396,102 @@ public class ControllerGUI implements Observer<AppEvent> {
         }
     }
 
+    //Filter stuff
+
+    private void initFilterTab() {
+        filteredMarks = new FilteredList<>(observableListMarks, s-> true);
+        tvFilter.setItems(filteredMarks);
+        columnNameFilter.setCellValueFactory(new PropertyValueFactory<Mark,String>("studentName"));
+        columnMarkFilter.setCellValueFactory(new PropertyValueFactory<Mark,Double>("value"));
+        columnHomeworkFilter.setCellValueFactory(new PropertyValueFactory<Mark,Integer>("homeworkNumber"));
+        columnGroupFilter.setCellValueFactory(new PropertyValueFactory<Mark, Integer>("group"));
+        columnDateFilter.setCellValueFactory(new PropertyValueFactory<Mark, String>("niceDate"));
+        cbFilterHomework.setItems(observableListHomework);
+        addListeners();
+    }
+
+    private void addListeners() {
+        cbFilterHomework.valueProperty().addListener(((observable, oldValue, newValue) -> filterAllMarks()));
+        tfNameFilter.textProperty().addListener(((observable, oldValue, newValue) -> filterAllMarks()));
+        tfGroupFilter.textProperty().addListener(((observable, oldValue, newValue) -> filterAllMarks()));
+        startingDate.valueProperty().addListener((observable, oldValue, newValue) -> filterAllMarks());
+        endingDate.valueProperty().addListener((observable, oldValue, newValue) -> filterAllMarks());
+    }
+
+    @FXML
+    private void clearFilter() {
+        //tvFilter.setItems(observableListMarks);
+        filteredMarks.setPredicate(s -> true);
+
+        tfNameFilter.clear();
+        startingDate.getEditor().clear();
+        endingDate.getEditor().clear();
+        tfGroupFilter.clear();
+        cbFilterHomework.getSelectionModel().clearSelection();
+        //cbFilterHomework.setPromptText("Select homework");
+    }
+
+
+    private void filterAllMarks() {
+        Integer homeworkId = null;
+        String name = null;
+        String group = null;
+        MyCoolPair<LocalDate, LocalDate> period = null;
+
+        if(cbFilterHomework.getValue() != null)
+            homeworkId = ((Homework)cbFilterHomework.getValue()).getID();
+
+        if(!tfNameFilter.getText().equals(""))
+            name = tfNameFilter.getText();
+
+        if(!tfGroupFilter.getText().equals(""))
+            group = tfGroupFilter.getText();
+
+        if(startingDate.getValue() != null && endingDate.getValue() != null) {
+            LocalDate starting = startingDate.getValue();
+            LocalDate ending = endingDate.getValue();
+            period = new MyCoolPair(starting,ending);
+        }
+
+        Optional<Integer> oHomeworkId = Optional.ofNullable(homeworkId);
+        Optional<String> oName = Optional.ofNullable(name);
+        Optional<String> oGroup = Optional.ofNullable(group);
+        Optional<MyCoolPair<LocalDate,LocalDate>> oPeriod = Optional.ofNullable(period);
+
+        filteredMarks.setPredicate(mark -> (!oHomeworkId.isPresent() || mark.getHomework().getID().equals(oHomeworkId.get()))
+                && (!oName.isPresent() || mark.getStudent().getName().contains(oName.get()))
+                && (!oGroup.isPresent() || String.valueOf(mark.getStudent().getGroup()).contains(oGroup.get()))
+                && (!oPeriod.isPresent() || (oPeriod.get().getFirst().isBefore(mark.getDate().toLocalDate()) &&
+                                            oPeriod.get().getSecond().isAfter(mark.getDate().toLocalDate()))));
+
+
+
+
+    }
+
+
     private void setAlarm(String msg) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setHeaderText("Student error");
         alert.setContentText(msg);
         alert.show();
+    }
+
+    class MyCoolPair<E,T> implements Serializable {
+        private E first;
+        private T second;
+
+        MyCoolPair(E e, T t) {
+            this.first = e;
+            this.second = t;
+        }
+
+        public E getFirst() {
+            return first;
+        }
+
+        public T getSecond() {
+            return second;
+        }
     }
 }

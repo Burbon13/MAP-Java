@@ -52,3 +52,21 @@ Predata in saptamana: 10
 Deadline: 3
 Feedback: Great homework done (motivated)
 
+Tema: 9
+Nota: 10.0
+Predata in saptamana: 10
+Deadline: 10
+Feedback: Frumos
+
+Tema: 4
+Nota: 1.0
+Predata in saptamana: 10
+Deadline: 5
+Feedback: NOTA 1, PREA TARZIU
+
+Tema: 8
+Nota: 7.5
+Predata in saptamana: 10
+Deadline: 9
+Feedback: NOTA A FOST DIMINUATA CU 2.5 PUNCTE DATORITA INTARZIERILOR
+
