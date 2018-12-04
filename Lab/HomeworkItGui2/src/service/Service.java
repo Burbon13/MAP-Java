@@ -250,4 +250,24 @@ public class Service implements Observable<AppEvent> {
     public LocalDate getStartingDate() {
         return startingDate;
     }
+
+    public void updateMarksForStudents(Student student) {
+        ArrayList<Mark> toUpd = new ArrayList<>();
+
+
+        int a = getAllMarks().size();
+        getAllMarks().forEach(mark -> {
+            System.out.println(mark.getStudent().getID());
+            System.out.println(student.getID());
+            System.out.println("-------");
+            if(mark.getStudent().getID().equals(student.getID())) {
+                toUpd.add(mark);
+            }
+        });
+
+        toUpd.forEach(mark -> {
+            System.out.println("Modfica");
+            markRepository.update(new Mark(student, mark.getHomework(), mark.getValue(), mark.getFeedback()));
+        });
+    }
 }

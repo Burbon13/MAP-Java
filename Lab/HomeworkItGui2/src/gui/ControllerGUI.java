@@ -144,10 +144,12 @@ public class ControllerGUI implements Observer<AppEvent> {
                 int pos = observableListStudents.indexOf((Student)appEvent.getOldData());
                 observableListStudents.remove((Student)appEvent.getOldData());
                 observableListStudents.add(pos, (Student)appEvent.getNewData());
+                service.updateMarksForStudents((Student)appEvent.getNewData());
+                doMagic();
             } else if(appEvent.getType() == ChangeEventType.DELETE) {
                 observableListStudents.remove((Student)appEvent.getNewData());
             }
-            tvStudentsS.refresh();
+            magicRefresh();
         } else if(appEvent.getEventClass() == EventClass.MARKS) {
             if (appEvent.getType() == ChangeEventType.ADD)
                 observableListMarks.add((Mark)appEvent.getNewData());
@@ -186,6 +188,13 @@ public class ControllerGUI implements Observer<AppEvent> {
 
     public ObservableList<Mark> getObservableListMarks() {
         return observableListMarks;
+    }
+
+    private void doMagic() {
+        this.observableListMarks = FXCollections.observableList(StreamSupport.stream(service.getAllMarks().spliterator(), false).collect(Collectors.toList()));
+        tvMarks.setItems(observableListMarks);
+        filteredMarks = new FilteredList<>(observableListMarks, s-> true);
+        tvFilter.setItems(filteredMarks);
     }
 
     @FXML
@@ -408,6 +417,12 @@ public class ControllerGUI implements Observer<AppEvent> {
         columnDateFilter.setCellValueFactory(new PropertyValueFactory<Mark, String>("niceDate"));
         cbFilterHomework.setItems(observableListHomework);
         addListeners();
+    }
+
+    private void magicRefresh() {
+        tvStudentsS.refresh();
+        tvFilter.refresh();
+        tvMarks.refresh();
     }
 
     private void addListeners() {
