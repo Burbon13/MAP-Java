@@ -1,0 +1,18 @@
+Tema: 9
+Nota: 9.34
+Predata in saptamana: 10
+Deadline: 10
+Feedback: Forgot the IValidator
+
+Tema: 7
+Nota: 4.34
+Predata in saptamana: 10
+Deadline: 8
+Feedback: NOTA A FOST DIMINUATA CU 5.0 PUNCTE DATORITA INTARZIERILOR
+
+Tema: 8
+Nota: 6.84
+Predata in saptamana: 10
+Deadline: 9
+Feedback: NOTA A FOST DIMINUATA CU 2.5 PUNCTE DATORITA INTARZIERILOR
+

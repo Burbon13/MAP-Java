@@ -38,7 +38,7 @@ public class Mark implements Serializable, HasID<Pair<Integer, Integer>>, DataEv
     }
 
     public double getValue() {
-        return value;
+        return Math.floor(100 * value) / 100;
     }
 
     public LocalDateTime getDate() {

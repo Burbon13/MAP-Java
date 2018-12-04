@@ -4,3 +4,9 @@ Predata in saptamana: 10
 Deadline: 8
 Feedback: NOTA A FOST DIMINUATA CU 5.0 PUNCTE DATORITA INTARZIERILOR
 
+Tema: 3
+Nota: 1.0
+Predata in saptamana: 10
+Deadline: 4
+Feedback: NOTA 1, PREA TARZIU
+

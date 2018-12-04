@@ -21,6 +21,7 @@ import view.Event;
 
 
 import java.awt.*;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -329,7 +330,7 @@ public class ControllerGUI implements Observer<AppEvent> {
 
 
         if (pass) {
-            content += "Mark: " + value + "\n";
+            content += "Mark: " + Math.floor(100 * value) / 100 + "\n";
             content += "Motivated\n";
         }
         else if(penalizare == -1){
@@ -339,7 +340,7 @@ public class ControllerGUI implements Observer<AppEvent> {
             double aux = value - penalizare;
             if(aux < 1)
                 aux = 1;
-            content += "Mark: " + aux + "\n";
+            content += "Mark: " + Math.floor(100 * aux) / 100 + "\n";
             content += "Penalty: " + penalizare + "\n";
         } else
             content += "Mark: " + value + "\n";
@@ -348,10 +349,11 @@ public class ControllerGUI implements Observer<AppEvent> {
         alert.setContentText(content);
         Optional<ButtonType> result = alert.showAndWait();
 
-        if(result.get() == ButtonType.OK) {
+        if(result.isPresent() && result.get() == ButtonType.OK) {
 
             //service.addHomework(((Homework)cbMark.getValue()).getID(), taFeedback.getText(), );
             try {
+                value = Math.floor(value * 100) / 100;
                 service.addMark(idStud, idHom, value, feedback, pass);
 //                service.addMark(selectedStudentForMark.getID(), ((Homework)cbMark.getValue()).getID(), Double.parseDouble(tfMarkValue.getText()),
 //                        taFeedback.getText(), isMotivated.isSelected());
