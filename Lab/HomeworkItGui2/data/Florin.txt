@@ -1,0 +1,12 @@
+Tema: 6
+Nota: 3.2699999999999996
+Predata in saptamana: 10
+Deadline: 8
+Feedback: NOTA A FOST DIMINUATA CU 5.0 PUNCTE DATORITA INTARZIERILOR
+
+Tema: 9
+Nota: 2.54
+Predata in saptamana: 10
+Deadline: 10
+Feedback: Nu merge UI-ul
+

@@ -1,0 +1,72 @@
+Tema: 9
+Nota: 7.76
+Predata in saptamana: 10
+Deadline: 10
+Feedback: Se putea mai bine
+
+Tema: 8
+Nota: 5.26
+Predata in saptamana: 10
+Deadline: 9
+Feedback: NOTA A FOST DIMINUATA CU 2.5 PUNCTE DATORITA INTARZIERILOR
+
+Tema: 6
+Nota: 2.76
+Predata in saptamana: 10
+Deadline: 8
+Feedback: NOTA A FOST DIMINUATA CU 5.0 PUNCTE DATORITA INTARZIERILOR
+
+Tema: 4
+Nota: 1.0
+Predata in saptamana: 10
+Deadline: 5
+Feedback: NOTA 1, PREA TARZIU
+
+Tema: 9
+Nota: 9.25
+Predata in saptamana: 10
+Deadline: 10
+Feedback: Binisor
+
+Tema: 9
+Nota: 8.34
+Predata in saptamana: 10
+Deadline: 10
+Feedback: Could have been done better
+
+Tema: 8
+Nota: 6.6
+Predata in saptamana: 10
+Deadline: 9
+Feedback: NOTA A FOST DIMINUATA CU 2.5 PUNCTE DATORITA INTARZIERILOR
+
+Tema: 6
+Nota: 5.0
+Predata in saptamana: 10
+Deadline: 8
+Feedback: NOTA A FOST DIMINUATA CU 5.0 PUNCTE DATORITA INTARZIERILOR
+
+Tema: 1
+Nota: 10.0
+Predata in saptamana: 10
+Deadline: 3
+Feedback: Great homework done (motivated)
+
+Tema: 9
+Nota: 10.0
+Predata in saptamana: 10
+Deadline: 10
+Feedback: Frumos
+
+Tema: 4
+Nota: 1.0
+Predata in saptamana: 10
+Deadline: 5
+Feedback: NOTA 1, PREA TARZIU
+
+Tema: 8
+Nota: 7.5
+Predata in saptamana: 10
+Deadline: 9
+Feedback: NOTA A FOST DIMINUATA CU 2.5 PUNCTE DATORITA INTARZIERILOR
+
