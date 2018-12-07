@@ -456,8 +456,11 @@ public class ControllerGUI implements Observer<AppEvent> {
         if(cbFilterHomework.getValue() != null)
             homeworkId = ((Homework)cbFilterHomework.getValue()).getID();
 
-        if(!tfNameFilter.getText().equals(""))
+        if(!tfNameFilter.getText().equals("")) {
+            System.out.println(":" + tfNameFilter.getText()+":");
             name = tfNameFilter.getText();
+        }
+
 
         if(!tfGroupFilter.getText().equals(""))
             group = tfGroupFilter.getText();

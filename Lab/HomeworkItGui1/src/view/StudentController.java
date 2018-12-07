@@ -27,8 +27,11 @@ public class StudentController implements Observer<StudentEvent> {
             observableList.add(studentEvent.getNewData());
         else if(studentEvent.getType() == ChangeEventType.UPDATE) {
             int pos = observableList.indexOf(studentEvent.getOldData());
-            observableList.remove(studentEvent.getOldData());
-            observableList.add(pos, studentEvent.getNewData());
+//            observableList.remove(studentEvent.getOldData());
+//            observableList.add(pos, studentEvent.getNewData());
+//            observableList.get(observableList.indexOf(studentEvent.getOldData())).
+            observableList.set(observableList.indexOf(studentEvent.getOldData()),studentEvent.getNewData());
+            //observableList.add(studentEvent.getNewData());
         }
         else if(studentEvent.getType() == ChangeEventType.DELETE) {
             observableList.remove(studentEvent.getNewData());

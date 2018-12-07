@@ -1,0 +1,7 @@
+Tema: 8
+Nota: 6.5
+Predata in saptamana: 10
+Deadline: 9
+Feedback: NOTA A FOST DIMINUATA CU 2.5 PUNCTE DATORITA INTARZIERILOR
+Ai uitat ui-ul
+

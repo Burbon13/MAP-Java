@@ -1,0 +1,12 @@
+Tema: 8
+Nota: 10.0
+Predata in saptamana: 10
+Deadline: 9
+Feedback: Buna tema!
+
+Tema: 6
+Nota: 5.0
+Predata in saptamana: 10
+Deadline: 8
+Feedback: NOTA A FOST DIMINUATA CU 5.0 PUNCTE DATORITA INTARZIERILOR
+
